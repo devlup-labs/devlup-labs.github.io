@@ -1,10 +1,10 @@
 <template lang="pug">
-  v-app(style="background-color: white")
-    PageHeader
-    v-content
-      v-container(fluid :fill-height="$route.meta.fillHeight")
-        router-view
-    PageFooter
+    v-app(style="background-color: white")
+        PageHeader
+        v-content
+            v-container(fluid)
+                router-view
+        PageFooter
 </template>
 
 <script>
