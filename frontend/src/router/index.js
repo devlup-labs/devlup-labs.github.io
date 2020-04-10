@@ -17,7 +17,7 @@ const routes = [{
         component: Profile
     },
     {
-        path: "/Timeline",
+        path: "/timeline",
         name: "Timeline",
         component: Timeline
     }
