@@ -7,7 +7,7 @@
         fill-dot
         center
       >
-        <span slot="opposite" ><h5 class="display-1 light-blue--text font-weight-light">2020</h5></span>
+        <span slot="opposite"><h5 class="display-1 light-blue--text"><small>10-04-2020</small></h5></span>
         <v-card class="elevation-5" max-width=70%>
           <v-card-title class="light-blue">
             <h2 class="display-1 white--text font-weight-light">DevLup Labs</h2>
@@ -32,7 +32,7 @@
         left
         small
       >
-        <span slot="opposite"><h5 class="display-1 teal--text font-weight-light">2020</h5></span>
+        <span slot="opposite"><h5 class="display-1 teal--text"><small>10-04-2020</small></h5></span>
         <v-card class="elevation-5" max-width=70% >
           <v-card-title class="teal justify-end">
             <h2 class="display-1 mr-4 white--text font-weight-light">DevLup Labs</h2>
@@ -54,7 +54,7 @@
         color="lime"
         fill-dot
         right
-      > <span slot="opposite" ><h5 class="display-1 lime--text font-weight-light">2020</h5></span>
+      > <span slot="opposite"><h5 class="display-1 lime--text"><small>10-04-2020</small></h5></span>
         <v-card class="elevation-5" max-width=70%>
             <v-card-title class="lime">   
             <h2 class="display-1 white--text font-weight-light">DevLup Labs</h2>
@@ -79,7 +79,7 @@
         left
         small
       >
-        <span slot="opposite"><h5 class="display-1 orange--text font-weight-light">2020</h5></span>
+        <span slot="opposite"><h5 class="display-1 orange--text"><small>10-04-2020</small></h5></span>
         <v-card class="elevation-5" max-width=70% >
           <v-card-title class="orange justify-end">
             <h2 class="display-1 mr-4 white--text font-weight-light">DevLup Labs</h2>
