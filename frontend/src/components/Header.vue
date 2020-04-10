@@ -8,7 +8,7 @@
             v-spacer
             div.hidden-sm-and-down.my-2
               v-btn(v-for="link in links" :key="link.text" :to="{name:link.text}" rounded depressed color="primary" exact) {{link.text}}
-              v-btn(rounded depressed color="primary" @click="scroll(pageHeight)") {{contact.text}}
+              v-btn(rounded depressed color="primary" @click="() => this.$vuetify.goTo('#bottom')") {{contact.text}}
             v-app-bar-nav-icon.hidden-md-and-up(dark @click.stop="drawer = !drawer")
         v-navigation-drawer(v-model="drawer" app right temporary)
           v-list(dense)
@@ -17,7 +17,7 @@
                 v-icon {{link.icon}}
               v-list-item-content
                 v-list-item-title(class="grey--text") {{link.text}}
-            v-list-item(@click="scroll(pageHeight); drawer = false")
+            v-list-item( @click="()=>{this.$vuetify.goTo('#bottom');drawer = false;}" ) 
               v-list-item-action
                 v-icon {{contact.icon}}
               v-list-item-content
@@ -41,17 +41,16 @@ export default {
     };
   },
   methods: {
-     scroll (p) {
-      this.$vuetify.goTo(p)
+    scroll(p) {
+      this.$vuetify.goTo(p);
     }
   },
   computed: {
-    pageHeight () {
-      return document.body.scrollHeight
+    pageHeight() {
+      return document.div.scrollHeight;
     }
-}
+  }
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

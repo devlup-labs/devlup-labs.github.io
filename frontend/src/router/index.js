@@ -36,7 +36,6 @@ const routes = [
     name: "Blog",
     componet: Profile
   }
-  
 ];
 
 const router = new VueRouter({
