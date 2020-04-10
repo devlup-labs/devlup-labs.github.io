@@ -9,19 +9,13 @@
             v-spacer
             div.hidden-sm-and-down.my-2
               v-btn(v-for="link in links" :key="link.text" :to="{name:link.text}" rounded depressed color="primary" exact) {{link.text}}
-              v-btn(rounded depressed color="primary" @click="() => this.$vuetify.goTo('#bottom')") {{contact.text}}
         v-navigation-drawer(v-model="drawer" app left temporary)
           v-list(dense)
             v-list-item( v-for="link in links" :key="link.text" @click="" :to="{name:link.text}" exact)
               v-list-item-action
                 v-icon {{link.icon}}
               v-list-item-content
-                v-list-item-title(class="grey--text") {{link.text}}
-            v-list-item( @click="()=>{this.$vuetify.goTo('#bottom');drawer = false;}" ) 
-              v-list-item-action
-                v-icon {{contact.icon}}
-              v-list-item-content
-                v-list-item-title(class="grey--text") {{contact.text}}
+                v-list-item-title.grey--text {{link.text}}
 </template>
 
 <script>
@@ -35,9 +29,9 @@ export default {
         { text: "About", icon: "mdi-information" },
         { text: "Events", icon: "mdi-briefcase-edit-outline" },
         { text: "Timeline", icon: "mdi-timeline-text" },
-        { text: "Blog", icon: "mdi-forum" }
-      ],
-      contact: { text: "Contact", icon: "mdi-contacts" }
+        { text: "Blog", icon: "mdi-forum" },
+        { text: "Team", icon: "mdi-human-male-male" }
+      ]
     };
   }
 };

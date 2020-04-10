@@ -24,17 +24,22 @@ const routes = [
   {
     path: "/events",
     name: "Events",
-    componet: Profile
+    component: Profile
   },
   {
     path: "/timeline",
     name: "Timeline",
-    componet: Home
+    component: Home
   },
   {
     path: "/blog",
     name: "Blog",
-    componet: Profile
+    component: Profile
+  },
+  {
+    path: "/team",
+    name: "Team",
+    component: Profile
   }
 ];
 
