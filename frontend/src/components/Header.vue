@@ -6,14 +6,16 @@
             v-toolbar-title.white--text
                 span.title.ml-3.mr-5 Devlup Labs&nbsp;
             v-spacer
-            v-btn.my-2.hidden-sm-and-down(v-for="(link,j) in links" :key="j" color="white" text rounded ) {{link.text}}
+            div.hidden-sm-and-down.my-2
+              v-btn(v-for="link in links" :key="link.text" :to="{name:link.text}" rounded depressed color="primary" exact) {{link.text}}
             v-app-bar-nav-icon.hidden-md-and-up(dark @click.stop="drawer = !drawer")
-        v-navigation-drawer(v-model="drawer" app right disable-route-watcher temporary)
-          v-list(rounded)
-            v-list-item(v-for="link in links" :key="link.text" link)
+        v-navigation-drawer(v-model="drawer" app right temporary)
+          v-list(dense)
+            v-list-item( v-for="link in links" :key="link.text" @click="" :to="{name:link.text}" exact)
               v-list-item-action
                 v-icon {{link.icon}}
-              v-list-item-content {{link.text}}
+              v-list-item-content
+                v-list-item-title(class="grey--text") {{link.text}}
                 
 </template>
 
@@ -36,4 +38,5 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

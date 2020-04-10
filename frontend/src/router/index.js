@@ -15,6 +15,31 @@ const routes = [
     path: "/profile",
     name: "Profile",
     component: Profile
+  },
+  {
+    path: "/about",
+    name: "About",
+    component: Home
+  },
+  {
+    path: "/events",
+    name: "Events",
+    componet: Profile
+  },
+  {
+    path: "/timeline",
+    name: "Timeline",
+    componet: Home
+  },
+  {
+    path: "/blog",
+    name: "Blog",
+    componet: Profile
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: Profile
   }
 ];
 
