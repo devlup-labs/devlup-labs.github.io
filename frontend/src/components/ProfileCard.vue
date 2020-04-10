@@ -24,8 +24,6 @@
               v-btn(icon href="#")
                 v-icon(color="#5CD0FF") mdi-linkedin       
 </template>
-// #5CD0FF
-// #F15B5C
 <script>
   export default {
     data: () => ({
