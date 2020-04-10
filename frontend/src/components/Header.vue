@@ -1,16 +1,16 @@
 <template lang="pug">
     div
         v-app-bar(app clipped-right color="primary" )
+            v-app-bar-nav-icon.hidden-md-and-up(dark @click.stop="drawer = !drawer")
             v-avatar(size="48px")
                 v-img(src="../assets/logo.jpeg")
-            v-toolbar-title.white--text
+            v-toolbar-title.hidden-sm-and-down.white--text
                 span.title.ml-3.mr-5 Devlup Labs&nbsp;
             v-spacer
             div.hidden-sm-and-down.my-2
               v-btn(v-for="link in links" :key="link.text" :to="{name:link.text}" rounded depressed color="primary" exact) {{link.text}}
               v-btn(rounded depressed color="primary" @click="() => this.$vuetify.goTo('#bottom')") {{contact.text}}
-            v-app-bar-nav-icon.hidden-md-and-up(dark @click.stop="drawer = !drawer")
-        v-navigation-drawer(v-model="drawer" app right temporary)
+        v-navigation-drawer(v-model="drawer" app left temporary)
           v-list(dense)
             v-list-item( v-for="link in links" :key="link.text" @click="" :to="{name:link.text}" exact)
               v-list-item-action
