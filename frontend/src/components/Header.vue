@@ -39,16 +39,6 @@ export default {
       ],
       contact: { text: "Contact", icon: "mdi-contacts" }
     };
-  },
-  methods: {
-    scroll(p) {
-      this.$vuetify.goTo(p);
-    }
-  },
-  computed: {
-    pageHeight() {
-      return document.div.scrollHeight;
-    }
   }
 };
 </script>
