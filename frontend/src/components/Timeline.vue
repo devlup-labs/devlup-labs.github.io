@@ -1,60 +1,39 @@
-<template lang="pug">
-  #app
-    v-app#inspire
-      v-timeline(:dense='$vuetify.breakpoint.smAndDown')
-        v-timeline-item(color='light-blue' fill-dot='' right='')
-          span(slot='opposite')
-            p.display-1.light-blue--text
-              font(size='5') April 2020
-          v-card.elevation-5(max-width='70%')
-            v-card-title.light-blue
-              h2.display-1.white--text.font-weight-light DevLup Labs
-            v-container
-              v-row.ml-2.text-left
-                | Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit.
-            v-card-actions
-              v-btn.ml-5.mb-2(small='' color='light-blue' dark='') Learn More
-              v-btn.ml-5.mb-2(small='' color='light-blue' dark='') Learn More
-        v-timeline-item(color='teal' fill-dot='' left='' small='')
-          span(slot='opposite')
-            p.display-1.teal--text
-              font(size='5') April 2020
-          v-card.elevation-5(max-width='70%')
-            v-card-title.teal.justify-end
-              h2.display-1.mr-4.white--text.font-weight-light DevLup Labs
-            v-container
-              v-row.ml-2.text-left
-                | Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit.
-            v-card-actions
-              v-btn.ml-5.mb-2(small='' color='teal' dark='') Learn More
-              v-btn.ml-5.mb-2(small='' color='teal' dark='') Learn More
-        v-timeline-item(color='lime' fill-dot='' right='')
-          span(slot='opposite')
-            p.display-1.lime--text
-              font(size='5') April 2020
-          v-card.elevation-5(max-width='70%')
-            v-card-title.lime
-              h2.display-1.white--text.font-weight-light DevLup Labs
-            v-container
-              v-row.ml-2.text-left
-                | Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit.
-            v-card-actions
-              v-btn.ml-5.mb-2(small='' color='lime' dark='') Learn More
-              v-btn.ml-5.mb-2(small='' color='lime' dark='') Learn More
-        v-timeline-item(color='orange' fill-dot='' left='' small='')
-          span(slot='opposite')
-            p.display-1.orange--text
-              font(size='5') April 2020
-          v-card.elevation-5(max-width='70%')
-            v-card-title.orange.justify-end
-              h2.display-1.mr-4.white--text.font-weight-light DevLup Labs
-            v-container
-              v-row.ml-2.text-left
-                | Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit.
-            v-card-actions
-              v-btn.ml-5.mb-2(small='' color='orange' dark='') Learn More
-              v-btn.ml-5.mb-2(small='' color='orange' dark='') Learn More
+<template>
+    <div id="app">
+        <v-app id="inspire">
+            <v-timeline :dense="$vuetify.breakpoint.smAndDown">
+                <v-timeline-item v-for="dat in datas" :key="dat.text" color="{name:data.totalcolor}" fill-dot="" {{dat.side}}="">
+                <span slot="opposite">
+                    <p class="display-1 dat.totalcolor--text"><font size="6">{{dat.dates}}</font></p>
+                </span>
+                <v-card class="elevation-5" max-width="70%">
+                    <v-card-title class="{name:dat.totalcolor}">
+                        <h2 class="display-1 white--text font-weight-light">{{dat.title}}</h2>
+                    </v-card-title>
+                    <v-container>
+                        <v-row class="ml-2 text-left">{{dat.info}}</v-row>
+                    </v-container>
+                    <v-card-actions>
+                        <v-btn class="ml-5 mb-2" small="" color="{name:dat.totalcolor}" dark="">{{dat.bt1text}}</v-btn>
+                        <v-btn class="ml-5 mb-2" small="" color="{name:dat.totalcolor}" dark="">{{dat.bt2text}}</v-btn>
+                    </v-card-actions>
+                </v-card>
+                </v-timeline-item>
+            </v-timeline>
+        </v-app>
+    </div>
 </template>
 <script>
-  export default {}
+export default {
+  name: "Timeline",
+  data (){
+    return {
+        drawer: null,
+        datas: [
+            {totalcolor: 'orange', side: 'right', dates: 'April 2020', title: 'DevLup Labs', info:'Information',bt1text: 'Learn More', bt2text: 'Learn More'}, 
+            {totalcolor: 'orange', side: 'left', dates: 'April 2020', title: 'DevLup Labs', info:'Information',bt1text: 'Learn More', bt2text: 'Learn More'}, 
+      ]
+    };
+  }
+};
 </script>
