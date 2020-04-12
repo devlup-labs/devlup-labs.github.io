@@ -11,9 +11,9 @@ div
       v-container
         v-row.ml-2.font-weight-bold.d-lg-none.d-xl-flex.d-xl-none {{ timelineDetail.date }}
         v-row.ml-2.mr-2.text-left {{ timelineDetail.info }}
-        v-btn.ml-5.mb-2.mt-2(small='', :color='timelineDetail.color', dark='')
+        v-btn.ml-5.mb-2.mt-2(small, :color='timelineDetail.color', dark,v-if='timelineDetail.firstButton')
           |{{ timelineDetail.firstButton }}
-        v-btn.ml-5.mb-2.mt-2(small='', :color='timelineDetail.color', dark='')
+        v-btn.ml-5.mb-2.mt-2(small, :color='timelineDetail.color', dark,v-if='timelineDetail.secondButton')
           |{{ timelineDetail.secondButton }}
 
 </template>

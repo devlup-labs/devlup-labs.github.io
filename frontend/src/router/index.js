@@ -17,9 +17,29 @@ const routes = [{
         component: Profile
     },
     {
+        path: "/about",
+        name: "About",
+        component: Home
+    },
+    {
+        path: "/events",
+        name: "Events",
+        component: Profile
+    },
+    {
         path: "/timeline",
         name: "Timeline",
         component: Timeline
+    },
+    {
+        path: "/blog",
+        name: "Blog",
+        component: Profile
+    },
+    {
+        path: "/team",
+        name: "Team",
+        component: Profile
     }
 ];
 
