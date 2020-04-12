@@ -1,27 +1,26 @@
 <template lang="pug">
 div
-  v-timeline-item(v-for='dat in datas', :key='dat.text', :color='dat.totalcolor', fill-dot='', v-model='dat.side')
+  v-timeline-item(v-for='timelineDetail in timelineDetails', :key='timelineDetail.text', :color='timelineDetail.color', fill-dot='', v-model='timelineDetail.side')
     span(slot='opposite')
-      p(:class="['display-1', `${dat.totalcolor}--text`]")
-        font(size='5') {{ dat.dates }}
-    v-card.elevation-5(max-width='70%')
-      v-card-title(:class='dat.totalcolor')
+      p(:class="['display-1', `${timelineDetail.color}--text`]")
+        font(size='5') {{ timelineDetail.date }}
+    v-card.elevation-5.ml-2.mr-2
+      v-card-title(:class='timelineDetail.color')
         h2.display-1.white--text.font-weight-light
-          | {{ dat.title }}
+          | {{ timelineDetail.title }}
       v-container
-        v-row.ml-2.text-left {{ dat.info }}
-      v-card-actions
-        v-btn.ml-5.mb-2(small='', :color='dat.totalcolor', dark='')
-          | {{ dat.bt1text }}
-        v-btn.ml-5.mb-2(small='', :color='dat.totalcolor', dark='')
-          | {{ dat.bt2text }}
+        v-row.ml-2.font-weight-bold.d-lg-none.d-xl-flex.d-xl-none {{ timelineDetail.date }}
+        v-row.ml-2.mr-2.text-left {{ timelineDetail.info }}
+        v-btn.ml-5.mb-2.mt-2(small='', :color='timelineDetail.color', dark='')
+          |{{ timelineDetail.firstButton }}
+        v-btn.ml-5.mb-2.mt-2(small='', :color='timelineDetail.color', dark='')
+          |{{ timelineDetail.secondButton }}
 
 </template>
-
 <script>
 export default {
   name: 'Timelinecard',
-  props: ['datas']
+  props: ['timelineDetails']
 } 
 
 </script>

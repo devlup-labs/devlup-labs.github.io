@@ -1,38 +1,42 @@
 <template>
   <div id="app">
     <v-app id="inspire">
-      <v-timeline :dense="$vuetify.breakpoint.smAndDown">
-        <Timelinecard v-bind:datas="datas"/>
-      </v-timeline>
+      <v-row class="justify-center">
+        <v-col cols="12" md="8">
+          <v-timeline :dense="$vuetify.breakpoint.smAndDown" >
+          <Timelinecard :timelineDetails="timelineDetails"/>
+          </v-timeline>
+        </v-col>
+      </v-row>
     </v-app>
   </div>
 </template>
 <script>
-import Timelinecard from "../components/Timelinecard.vue"
+import Timelinecard from "../components/Timelinecard.vue";
 export default {
   name: "Timeline",
   components:{Timelinecard},
   data() {
     return {
       drawer: null,
-      datas: [
+      timelineDetails: [
         {
-          totalcolor: "orange",
+          color: "light-blue",
           side: "right",
-          dates: "April 2020",
-          title: "DevLup Labs",
-          info: "Information",
-          bt1text: "Learn More",
-          bt2text: "Learn More"
+          date: "April 2020",
+          title: "DevlUp Labs",
+          info: "Sentiments two occasional affronting solicitude travelling and one contrasted. Fortune day out married parties. Happiness remainder joy but earnestly for off. Took sold add play may none him few",
+          firstButton: "Learn More",
+          secondButton: "Learn More"
         },
         {
-          totalcolor: "orange",
+          color: "teal",
           side: "left",
-          dates: "May 2020",
-          title: "DevLup Labs",
-          info: "Information",
-          bt1text: "Learn More",
-          bt2text: "Learn More"
+          date: "May 2020",
+          title: "DevlUp Labs",
+          info: "Sentiments two occasional affronting solicitude travelling and one contrasted. Fortune day out married parties. Happiness remainder joy but earnestly for off. Took sold add play may none him few",
+          firstButton: "Learn More",
+          secondButton: "Learn More"
         }
       ]
     };
