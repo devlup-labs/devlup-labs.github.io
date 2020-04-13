@@ -1,0 +1,8 @@
+asgiref==3.2.7
+django-decouple==2.1
+django-versatileimagefield==2.0
+django==3.0.5
+pillow==7.1.1
+python-magic==0.4.15
+pytz==2019.3
+sqlparse==0.3.1
