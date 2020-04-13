@@ -15,7 +15,6 @@ export default {
       timelineDetails: [
         {
           color: "light-blue",
-          side: "right",
           date: "April 2020",
           title: "Fortune day out married parties.",
           info:
@@ -27,7 +26,6 @@ export default {
         },
         {
           color: "teal",
-          side: "left",
           date: "May 2020",
           title: "Fortune day out married parties.",
           info:

@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  v-timeline-item(v-for='timelineDetail in timelineDetails', :key='timelineDetail.text', :color='timelineDetail.color', fill-dot='', v-model='timelineDetail.side')
+  v-timeline-item(v-for='(timelineDetail,index) in timelineDetails', :key='timelineDetail.text', :color='timelineDetail.color', fill-dot='', :value='checkOrientation(index)' )
     span(slot='opposite')
       p(:class="['display-1', `${timelineDetail.color}--text`]")
         font(size='5') {{ timelineDetail.date }}
@@ -21,6 +21,15 @@ div
 <script>
 export default {
   name: "TimelineCard",
-  props: ["timelineDetails"]
+  props: ["timelineDetails"],
+  methods:{
+    checkOrientation(index){
+      if(index%2)
+        return 'right'
+      else
+        return 'left'
+      
+    }
+  }
 };
 </script>
