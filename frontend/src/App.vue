@@ -1,5 +1,5 @@
 <template lang="pug">
-    v-app(style="background-color: white")
+    v-app(style="background-color: #747474")
         PageHeader
         v-content
             v-container(fluid)

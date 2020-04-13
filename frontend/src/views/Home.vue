@@ -1,6 +1,5 @@
 <template lang="pug">
-  div.home(align="center")
-    v-img(alt="Devlup Labs logo" src="../assets/logo.jpeg")
+  v-img(alt="Devlup Labs logo" src="../assets/logo.jpeg" height="300" contain)
 </template>
 
 <script>

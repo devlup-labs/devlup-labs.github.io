@@ -7,7 +7,10 @@ Vue.use(Vuetify);
 export default new Vuetify({
   theme: {
     options: {
-      customProperties: true
+      customProperties: true,
+      profile: {
+        cardHeight : 300
+      }
     },
     themes: {
       light: {
