@@ -17,7 +17,7 @@ export default {
           color: "light-blue",
           side: "right",
           date: "April 2020",
-          title: "DevlUp Labs",
+          title: "Fortune day out married parties.",
           info:
             "Sentiments two occasional affronting solicitude travelling and one contrasted. Fortune day out married parties. Happiness remainder joy but earnestly for off. Took sold add play may none him few",
           firstButton: "Learn More",
@@ -29,7 +29,7 @@ export default {
           color: "teal",
           side: "left",
           date: "May 2020",
-          title: "DevlUp Labs",
+          title: "Fortune day out married parties.",
           info:
             "Sentiments two occasional affronting solicitude travelling and one contrasted. Fortune day out married parties. Happiness remainder joy but earnestly for off. Took sold add play may none him few",
           firstButton: "Learn More",
