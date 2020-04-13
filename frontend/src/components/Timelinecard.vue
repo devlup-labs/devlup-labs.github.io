@@ -6,7 +6,7 @@ div
         font(size='5') {{ timelineDetail.date }}
     v-card.elevation-5.ml-2.mr-2
       v-card-title(:class='timelineDetail.color')
-        h2.display-1.white--text.font-weight-light(style='word-break: break-word;')
+        span.display-1.white--text.font-weight-light(style='word-break: break-word;')
           | {{ timelineDetail.title }}
       v-container
         v-row.ml-2.font-weight-bold.d-lg-none.d-xl-flex.d-xl-none {{ timelineDetail.date }}
@@ -15,9 +15,8 @@ div
           v-btn.mb-2.mt-2(small='small', :color='timelineDetail.color', dark='dark', v-if='timelineDetail.firstButton') {{ timelineDetail.firstButton }}
         a(:href='timelineDetail.secondButtonLink',style='text-decoration:none;',v-if='timelineDetail.secondButtonLink')
           v-btn.ml-2.mb-2.mt-2(small='small', :color='timelineDetail.color', dark='dark', v-if='timelineDetail.secondButton') {{ timelineDetail.secondButton }}
-
-
 </template>
+
 <script>
 export default {
   name: "TimelineCard",
@@ -28,7 +27,6 @@ export default {
         return 'right'
       else
         return 'left'
-      
     }
   }
 };

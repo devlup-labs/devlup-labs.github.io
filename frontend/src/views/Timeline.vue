@@ -4,6 +4,7 @@
       v-timeline(:dense='$vuetify.breakpoint.smAndDown')
         TimelineCard(:timelineDetails='timelineDetails')
 </template>
+
 <script>
 import TimelineCard from "../components/TimelineCard.vue";
 export default {
