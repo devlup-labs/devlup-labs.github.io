@@ -1,4 +1,12 @@
+#editor directories and files
 .idea
+
+#dotenv
 .env
+
+#database
 src/db.sqlite3
 src/pfdb
+
+## Byte-compiled / optimized / DLL files
+src/portfolio/__pycache__/
