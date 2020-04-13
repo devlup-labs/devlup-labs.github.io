@@ -2,16 +2,16 @@
       <v-row class="justify-center">
         <v-col cols="12" md="8">
           <v-timeline :dense="$vuetify.breakpoint.smAndDown" >
-          <Timelinecard :timelineDetails="timelineDetails"/>
+          <TimelineCard :timelineDetails="timelineDetails"/>
           </v-timeline>
         </v-col>
       </v-row>
 </template>
 <script>
-import Timelinecard from "../components/Timelinecard.vue";
+import TimelineCard from "../components/TimelineCard.vue";
 export default {
   name: "Timeline",
-  components:{Timelinecard},
+  components:{TimelineCard},
   data() {
     return {
       drawer: null,
@@ -23,7 +23,9 @@ export default {
           title: "DevlUp Labs",
           info: "Sentiments two occasional affronting solicitude travelling and one contrasted. Fortune day out married parties. Happiness remainder joy but earnestly for off. Took sold add play may none him few",
           firstButton: "Learn More",
-          secondButton: ""
+          firstButtonLink: "#",
+          secondButton: "Learn More",
+          secondButtonLink: "#",
         },
         {
           color: "teal",
@@ -32,7 +34,9 @@ export default {
           title: "DevlUp Labs",
           info: "Sentiments two occasional affronting solicitude travelling and one contrasted. Fortune day out married parties. Happiness remainder joy but earnestly for off. Took sold add play may none him few",
           firstButton: "Learn More",
-          secondButton: "Learn More"
+          firstButtonLink: "#",
+          secondButton: "Learn More",
+          secondButtonLink: "#",
         }
       ]
     };
