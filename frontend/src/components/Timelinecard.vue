@@ -20,8 +20,7 @@ div
 </template>
 <script>
 export default {
-  name: 'TimelineCard',
-  props: ['timelineDetails']
-} 
-
+  name: "TimelineCard",
+  props: ["timelineDetails"]
+};
 </script>
