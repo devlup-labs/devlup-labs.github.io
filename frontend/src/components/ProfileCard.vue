@@ -1,7 +1,7 @@
 <template lang="pug">
 v-container
   v-card(v-for="Profile in Profiles" :key="Profile.name" :width="getProfileWidth")
-    v-stepper(v-model="Profile.e1")
+    v-stepper(v-model="e1")
       v-stepper-items
         v-stepper-content.pa-1(step="1")
           v-card.pa-1(:width="getProfileWidth")
@@ -13,23 +13,23 @@ v-container
                 div
                   h4 
                     u {{ Profile.Name }}
-                  h6 Current position : {{ Profile.Position1 }}
-                  h6 Position in Devlup : {{Profile.Position2 }}
+                  h6 Current position : {{ Profile.CurrentDesignation }}
+                  h6 Position in Devlup : {{Profile.DevlupDesignation }}
                 v-flex.mt-1 
-                  v-btn(:href="Profile.href1" icon small v-if="Profile.href1")
+                  v-btn(:href="Profile.EmailLink" icon small v-if="Profile.EmailLink")
                     v-icon(color="red") mdi-email
-                  v-btn(:href="Profile.href2" icon small v-if="Profile.href2")
+                  v-btn(:href="Profile.GithubLink" icon small v-if="Profile.GithubLink")
                     v-icon(color="black") mdi-github
-                  v-btn(:href="Profile.href3" icon small v-if="Profile.href3")
+                  v-btn(:href="Profile.GitlabLink" icon small v-if="Profile.GitlabLink")
                     v-icon(color="orange") mdi-gitlab
-                  v-btn(:href="Profile.href4" icon small v-if="Profile.href4")
+                  v-btn(:href="Profile.LinkedinLink" icon small v-if="Profile.LinkedinLink")
                     v-icon(color="blue") mdi-linkedin     
               v-col.pa-1(cols="2")    
-                v-icon(@click="Profile.e1 = 2") mdi-arrow-right-box
+                v-icon(@click="e1 = 2") mdi-arrow-right-box
         v-stepper-content.pa-1(step="2")
           v-row
             v-col(cols="1")
-              v-icon(@click="Profile.e1 = 1") mdi-arrow-left-box
+              v-icon(@click="e1 = 1") mdi-arrow-left-box
             v-col(cols="11")  {{ Profile.info }}
 </template>
 
@@ -41,10 +41,10 @@ v-container
   },
     data () {
       return {
-        
+        e1: 1,
         Profiles:[
-        { Name: "Profile Name", Position1: "Student", Position2: "", info: "All the info here.", 
-        src: require('../assets/Profile.png'), href1:"#", href2:"#", href3:"#", href4:"#", e1: 1}
+        { Name: "Profile Name", CurrentDesignation: "Student", DevlupDesignation: "", info: "All the info here.", 
+        src: require('../assets/Profile.png'), EmailLink:"#", GithubLink:"#", GitlabLink:"#", LinkedinLink:"#"}
         ]
       }
     },
