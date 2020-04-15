@@ -1,6 +1,6 @@
 <template lang="pug">
     div
-        v-app-bar(app clipped-right color="#272727")
+        v-app-bar(app clipped-right color="secondary")
             v-app-bar-nav-icon.hidden-md-and-up(@click.stop="drawer = !drawer")
             v-avatar(size="48px")
                 v-img(src="../assets/logo.jpeg")
@@ -8,7 +8,7 @@
                 span.title.ml-3.mr-5(text) Devlup Labs&nbsp;
             v-spacer
             div.hidden-sm-and-down
-              v-chip.pa-2.ma-2(v-for="link in links" :key="link.text" :to="{name:link.text}" label exact dark color="#272727") {{link.text}}
+              v-chip.pa-2.ma-2(v-for="link in links" :key="link.text" :to="{name:link.text}" label exact dark color="secondary") {{link.text}}
         v-navigation-drawer(v-model="drawer" app left temporary)
           v-list(dense)
             v-list-item( v-for="link in links" :key="link.text" @click="" :to="{name:link.text}" exact)
