@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-card.pa-3(:min-height="getCardHeight" :width="1.1*getCardHeight"  border hover color="#272727")
+  v-card.pa-3(:min-height="getProjectHeight" :width="1.1*getProjectHeight"  border hover color="#272727")
     div(align="center")
       h2(align-text="center" style="color:#ffffff" underline)
         span CDC Portal (3
@@ -44,15 +44,13 @@
   data() {
     return {
       items: [
-        { src : require('../assets/cdclogo.png')},
-        { src : require('../assets/Profile.png')},
-        { src : require('../assets/Jash.jpg')},
+        { src : require('../assets/cdclogo.jpg')}
       ],
     }
   },
   computed: {
-    getCardHeight() {
-      return this.cardHeight || this.$vuetify.theme.options.profile.cardHeight;
+    getProjectHeight() {
+      return this.ProjectHeight || this.$vuetify.theme.options.cards.ProjectHeight;
     }
   } 
 }

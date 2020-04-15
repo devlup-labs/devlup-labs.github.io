@@ -8,8 +8,9 @@ export default new Vuetify({
   theme: {
     options: {
       customProperties: true,
-      profile: {
-        cardHeight : 300
+      cards: {
+        ProjectHeight: 300,
+        ProfileWidth: 300,
       }
     },
     themes: {

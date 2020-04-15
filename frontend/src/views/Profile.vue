@@ -2,7 +2,11 @@
 v-container
   v-row 
     v-col
-      ProfileCard     
+      ProfileCard   
+    v-col
+      ProfileCard 
+    v-col
+      ProfileCard       
 </template>
 
 <script>
