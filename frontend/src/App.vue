@@ -1,5 +1,5 @@
 <template lang="pug">
-    v-app(style="background-color: white")
+    v-app
         PageHeader
         v-content
             v-container(fluid)
@@ -25,6 +25,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  background-color: #747474;
 }
 </style>
