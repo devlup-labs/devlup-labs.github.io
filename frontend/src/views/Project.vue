@@ -1,6 +1,12 @@
 <template lang="pug">
-  div(align="center")  
-    ProjectCard
+v-container  
+  v-row
+    v-col
+      ProjectCard 
+    v-col
+      ProjectCard 
+    v-col
+      ProjectCard 
 </template>
 
 <script>

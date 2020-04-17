@@ -32,7 +32,6 @@ v-container
               v-icon(@click="e1 = 1") mdi-arrow-left-box
             v-col(cols="11")  {{ Profile.info }}
 </template>
-
 <script>
   export default {
     name: "ProfileCard",

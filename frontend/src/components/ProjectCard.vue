@@ -1,38 +1,27 @@
 <template lang="pug">
-  v-card.pa-3(:min-height="getProjectHeight" :width="1.1*getProjectHeight"  border hover color="#272727")
-    div(align="center")
-      h2(align-text="center" style="color:#ffffff" underline)
-        span CDC Portal (3
-          v-icon(small) mdi-light mdi-star ) 
-          span )
-      div.pa-5 
-        v-img(src="../assets/cdclogo.jpg" contain height="150")
-      //- v-carousel(:show-arrows="false" height="200")
-      //-   v-carousel-item(v-for="(item,i) in items" contain :key="i" :src="item.src")
-      v-divider
-      div.pa-1(style="background-color:#FFFFFF")
-        h4.pa-1 A portal for handling student  placements
-        hr(color="#272727")
-        v-flex.pa-1
-          v-chip(label dark small).pa-2.ma-1
-            v-icon(left) mdi-language-html5 
-            span HTML
-          v-chip(label dark small).pa-2.ma-1
-            v-icon(left) mdi-language-python 
-            span Python
-          v-chip(label dark small).pa-2.ma-1
-            v-icon(left) mdi-language-javascript
-            span Javascript
-        hr(color="#272727")
-        h5.pa-1 This is a web portal for automating the placement procedure. The above mentioned technology stack was used to build the project.
-        hr(color="#272727" size="5px")
-        div(style="background-color:#272727" width="50px")  
-          v-card-actions.pa-0
-            v-flex
-              v-btn(icon href="#")
-                v-icon mdi-light mdi-web  
-              v-btn(icon href="#")
-                v-icon mdi-light mdi-github       
+v-container
+  v-card.pa-3(v-for="Project in Projects" :key="Project.name" :width="0.95*getProjectHeight" hover color="secondary")
+    h2(style="color:white" underline) {{ Project.name }}
+    v-carousel.mb-3.mt-3(hide-delimiters :height="0.5*getProjectHeight")
+      v-carousel-item(v-for="image in Project.images" contain :key="image.src" :src="image.src")
+    v-divider
+    v-card.pa-1(color="white")
+      h5.pa-1 {{ Project.description }}
+      v-divider(color="black")
+      v-flex.pa-1
+        v-chip.pa-2.ma-1(v-for="link in Project.links" :key="link.name" label small) {{ link.name }}  
+        v-btn(icon @click="show = !show")
+          v-icon {{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}
+      v-expand-transition
+        div(v-show="show") 
+          h6.pa-1 {{ Project.info }}
+      v-card(color="secondary")  
+        v-card-actions.pa-0
+          v-flex
+            v-btn(:href="Project.GithubLink" icon v-if="Project.GithubLink")
+              v-icon mdi-light mdi-github
+            v-btn(:href="Project.WebLink" icon v-if="Project.WebLink")
+              v-icon mdi-light mdi-web       
 </template>
 
 <script>
@@ -43,8 +32,12 @@
   },
   data() {
     return {
-      items: [
-        { src : require('../assets/cdclogo.jpg')}
+      show: false,
+      Projects:[
+        { name: "CDC Portal", description: "A portal for handling student  placements", 
+        info: "This is a web portal for automating the placement procedure. The above mentioned technology stack was used.",
+        GithubLink: "#", WebLink: "#", links: [{ name: "python"},{ name: "html"},{ name: "javascript"}], 
+        images: [{ src : require('../assets/cdclogo.jpg')},{ src : require('../assets/Profile.png')}],}
       ],
     }
   },
@@ -55,5 +48,3 @@
   } 
 }
 </script>
-
-

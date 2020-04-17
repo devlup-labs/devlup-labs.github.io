@@ -19,6 +19,11 @@ const routes = [
     component: Profile
   },
   {
+    path: "/project",
+    name: "Project",
+    component: Project
+  },
+  {
     path: "/about",
     name: "About",
     component: Home
