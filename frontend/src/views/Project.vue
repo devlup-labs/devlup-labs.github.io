@@ -1,4 +1,5 @@
 <template lang="pug">
+  div(align="center")  
     ProjectCard
 </template>
 

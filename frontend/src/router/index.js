@@ -2,7 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Profile from "../views/Profile.vue";
-import Project from "../views/Project.vue"
+import Project from "../views/Project.vue";
+import Timeline from "../views/Timeline.vue";
 
 Vue.use(VueRouter);
 
@@ -30,12 +31,12 @@ const routes = [
   {
     path: "/events",
     name: "Events",
-    component: Profile
+    component: Project
   },
   {
     path: "/timeline",
     name: "Timeline",
-    component: Home
+    component: Timeline
   },
   {
     path: "/blog",
@@ -50,9 +51,9 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
-  routes
+    mode: "history",
+    base: process.env.BASE_URL,
+    routes
 });
 
 export default router;
