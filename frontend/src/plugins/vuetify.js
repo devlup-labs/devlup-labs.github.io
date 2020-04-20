@@ -7,12 +7,16 @@ Vue.use(Vuetify);
 export default new Vuetify({
   theme: {
     options: {
-      customProperties: true
+      customProperties: true,
+      cards: {
+        ProjectHeight: 300,
+        ProfileWidth: 300,
+      }
     },
     themes: {
       light: {
-        primary: "#ee44aa",
-        secondary: "#424242",
+        primary: "#747474",
+        secondary: "#272727",
         accent: "#82B1FF",
         error: "#FF5252",
         info: "#2196F3",

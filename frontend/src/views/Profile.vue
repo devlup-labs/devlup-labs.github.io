@@ -1,5 +1,12 @@
 <template lang="pug">
-    ProfileCard
+v-container
+  v-row 
+    v-col
+      ProfileCard   
+    v-col
+      ProfileCard 
+    v-col
+      ProfileCard       
 </template>
 
 <script>
