@@ -1,10 +1,14 @@
 <template lang="pug">
-  div(class="home" align="center")
-    img(alt="Devlup Labs logo" src="../assets/logo.jpeg")
+  HomeLanding
 </template>
 
 <script>
+
+import HomeLanding from "../components/HomeLanding";
 export default {
-  name: "Home"
+  name: "Home",
+  components: {
+    HomeLanding
+  }
 };
 </script>
