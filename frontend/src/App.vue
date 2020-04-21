@@ -6,6 +6,7 @@
         PageFooter
 </template>
 
+
 <script>
 import PageHeader from "@/components/Header.vue";
 import PageFooter from "@/components/Footer.vue";
