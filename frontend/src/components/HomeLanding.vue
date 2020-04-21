@@ -1,25 +1,15 @@
-<template>
-  <v-app id="inspire">
-    <v-container style="z-index:1 ; height:100%;" class="mt-12 mt-sm-0 pt-sm-3 pt-12">
-      <v-row
-        align="center"
-        justify="center"
-        style="height:100%"
-        class="mt-12 mt-sm-0 pt-sm-0 pt-12 px-4"
-      >
-        <v-col sm="7" cols=12 class="text-left px-md-3  px-10" >
-        <div class="pl-md-10 pr-sm-7">
-        <h1 class="font-weight-bold mb-1 mb-sm-5" :class="[$vuetify.breakpoint.lgAndUp ? 'display-4' :'display-2']">DevlUp Labs</h1>
-        <h1 class="font-weight-regular" :class="[$vuetify.breakpoint.lgAndUp ? 'display-2' : 'headline']"> <span class="blue--text">Open Source</span> development enthusiasts group at IIT Jodhpur</h1>
-        </div>
-        </v-col>
-        
-        <v-col sm="5" cols=12>
-        </v-col>
-      </v-row>
-    </v-container>
+<template lang="pug">
+v-app#inspire
+  v-container.mt-12.mt-sm-0.pt-sm-3.pt-12(style='z-index:1 ; height:100%;')
+    v-row.mt-12.mt-sm-0.pt-sm-0.pt-12.px-4(align='center' justify='center' style='height:100%')
+      v-col.text-left.px-md-3.px-10(sm='7' cols='12')
+        .pl-md-10.pr-sm-7
+          h1.font-weight-bold.mb-1.mb-sm-5(:class="[$vuetify.breakpoint.lgAndUp ? 'display-4' :'display-2']") DevlUp Labs
+          h1.font-weight-regular(:class="[$vuetify.breakpoint.lgAndUp ? 'display-2' : 'headline']")
+            span.blue--text Open Source
+            |  development enthusiasts group at IIT Jodhpur
+      v-col(sm='5' cols='12')
 
-  </v-app>
 </template>
 
 <style>
