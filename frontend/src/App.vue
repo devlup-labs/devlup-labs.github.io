@@ -2,11 +2,18 @@
     v-app
         PageHeader
         v-content
+<<<<<<< HEAD
+=======
+            v-container(fluid)
+>>>>>>> upstream/master
                 router-view
         PageFooter
 </template>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/master
 <script>
 import PageHeader from "@/components/Header.vue";
 import PageFooter from "@/components/Footer.vue";
