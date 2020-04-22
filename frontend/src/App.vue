@@ -2,7 +2,6 @@
     v-app
         PageHeader
         v-content
-            v-container(fluid)
                 router-view
         PageFooter
 </template>
