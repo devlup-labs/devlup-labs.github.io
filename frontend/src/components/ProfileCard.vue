@@ -3,10 +3,10 @@ v-container
   v-card(v-for="Profile in Profiles" :key="Profile.name" :width="getProfileWidth")
     v-stepper(v-model="e1")
       v-stepper-items
-        v-stepper-content.pa-1(step="1")
-          v-card.pa-1(:width="getProfileWidth")
+        v-stepper-content.pa-0(step="1")
+          v-card.pl-3(:width="getProfileWidth")
             v-row 
-              v-col(cols="4") 
+              v-col(cols="4" style="background-color:#21a9e5") 
                 v-avatar(:size="(4/15)*getProfileWidth")
                   v-img(:src="Profile.src" contain)
               v-col.pa-2(cols="6" align="left")  
