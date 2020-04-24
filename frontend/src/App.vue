@@ -1,6 +1,6 @@
 <template lang="pug">
     v-app
-        PageHeader
+        PageHeader(style="z-index:5")
         v-content
                 router-view
         PageFooter
@@ -24,6 +24,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: #747474;
+  background-color: #ffffff;
 }
 </style>
