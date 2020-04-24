@@ -25,11 +25,11 @@ v-container
                   v-btn(:href="Profile.LinkedinLink" icon small v-if="Profile.LinkedinLink")
                     v-icon(color="blue") mdi-linkedin     
               v-col.pt-1.pa-0(cols="1")    
-                v-icon(@click="e1 = 2" color="#1b65c4") mdi-arrow-right-box
+                v-icon(@click="e1 = 2" color="basic") mdi-arrow-right-box
         v-stepper-content.pa-1(step="2")
           v-row
             v-col(cols="1")
-              v-icon(@click="e1 = 1" color="#1b65c4") mdi-arrow-left-box
+              v-icon(@click="e1 = 1" color="basic") mdi-arrow-left-box
             v-col(cols="11")  {{ Profile.info }}
 </template>
 <script>
