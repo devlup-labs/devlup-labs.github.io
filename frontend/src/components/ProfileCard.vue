@@ -1,15 +1,15 @@
 <template lang="pug">
 v-container
-  v-card(v-for="Profile in Profiles" :key="Profile.name" :width="getProfileWidth")
+  v-card(v-for="Profile in Profiles" :key="Profile.name" :width="1.05*getProfileWidth")
     v-stepper(v-model="e1")
       v-stepper-items
         v-stepper-content.pa-0(step="1")
-          v-card.pl-3(:width="getProfileWidth")
+          v-card.pl-3(:width="getProfileWidth" flat)
             v-row 
-              v-col(cols="4" style="background-color:#21a9e5") 
+              v-col(cols="4" style="background-color:#1b65c4") 
                 v-avatar(:size="(4/15)*getProfileWidth")
                   v-img(:src="Profile.src" contain)
-              v-col.pa-2(cols="6" align="left")  
+              v-col.pa-2(cols="7" align="left")  
                 div
                   h4 
                     u {{ Profile.Name }}
@@ -24,12 +24,12 @@ v-container
                     v-icon(color="orange") mdi-gitlab
                   v-btn(:href="Profile.LinkedinLink" icon small v-if="Profile.LinkedinLink")
                     v-icon(color="blue") mdi-linkedin     
-              v-col.pa-1(cols="2")    
-                v-icon(@click="e1 = 2") mdi-arrow-right-box
+              v-col.pt-1.pa-0(cols="1")    
+                v-icon(@click="e1 = 2" color="#1b65c4") mdi-arrow-right-box
         v-stepper-content.pa-1(step="2")
           v-row
             v-col(cols="1")
-              v-icon(@click="e1 = 1") mdi-arrow-left-box
+              v-icon(@click="e1 = 1" color="#1b65c4") mdi-arrow-left-box
             v-col(cols="11")  {{ Profile.info }}
 </template>
 <script>

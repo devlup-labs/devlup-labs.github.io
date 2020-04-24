@@ -1,5 +1,5 @@
 <template lang="pug">
-    v-footer(color="#21a9e5" padless)
+    v-footer(color="#1b65c4" padless)
       v-row(justify="center" no-gutters)
         v-btn.py-2(v-for="link in links" :key="link" color="white" icon)
           v-icon {{link}}

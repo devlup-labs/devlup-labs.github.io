@@ -29,8 +29,8 @@ const routes = [
     component: Home
   },
   {
-    path: "/events",
-    name: "Events",
+    path: "/projects",
+    name: "Projects",
     component: Project
   },
   {
@@ -41,7 +41,7 @@ const routes = [
   {
     path: "/blog",
     name: "Blog",
-    component: Profile
+    component: Home
   },
   {
     path: "/team",
