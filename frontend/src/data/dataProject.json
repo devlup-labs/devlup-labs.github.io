@@ -1,0 +1,9 @@
+[{
+    "name": "CDC Portal",
+    "description": "A portal for handling student  placements",
+    "info": "This is a web portal for automating the placement procedure. The above mentioned technology stack was used.",
+    "GithubLink": "#",
+    "WebLink": "#",
+    "links": [{ "name": "python" }, { "name": "html" }, { "name": "javascript" }],
+    "images": [{ "src": "require('../data/images/cdclogodata.jpg')" }, { "src": "require('../data/images/Profiledata.png')" }]
+}]
