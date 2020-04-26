@@ -1,8 +1,8 @@
 [{
         "color": "light-blue",
         "date": "April 2020",
-        "title": "Portfolio Of DevlUps Labs Created",
-        "info": "Open Source development enthusiasts group at IIT Jodhpur",
+        "title": "Portfolio Created",
+        "info": "The portfolio for DevlUps Labs the open source community at IIT Jodhpur was created.Various tools and languages such as Django,Vue.js and frontend work was used.",
         "firstButton": "GitHub",
         "firstButtonLink": "#",
         "secondButton": "Learn More",

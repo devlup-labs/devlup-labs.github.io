@@ -38,15 +38,14 @@ v-container
     props: {
     ProfileWidth: Number,
   },
-    data () {
-      return {
-        e1: 1,
-        Profiles:[
-        { Name: "Profile Name", CurrentDesignation: "Student", DevlupDesignation: "", info: "All the info here.", 
-        src: require('../assets/Profile.png'), EmailLink:"#", GithubLink:"#", GitlabLink:"#", LinkedinLink:"#"}
-        ]
-      }
-    },
+    data: ()=> ({
+      e1: 1,
+      Profiles:[]
+      
+    }),
+    created(){
+    fetch("/data/Profiles.json").then(resp => resp.json().then(list => this.Profiles=list))
+  },
     computed: {
     getProfileWidth() {
       return this.ProfileWidth || this.$vuetify.theme.options.cards.ProfileWidth;

@@ -1,0 +1,13 @@
+[
+  {
+    "Name": "Profile Name",
+    "CurrentDesignation": "Student",
+    "DevlupDesignation": "",
+    "info": "All the info here.",
+    "src": "../data/images/Profiledata.png",
+    "EmailLink": "#",
+    "GithubLink": "#",
+    "GitlabLink": "#",
+    "LinkedinLink": "#"
+  }
+]
