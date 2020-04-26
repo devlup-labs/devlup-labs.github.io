@@ -5,5 +5,5 @@
     "GithubLink": "#",
     "WebLink": "#",
     "links": [{ "name": "python" }, { "name": "html" }, { "name": "javascript" }],
-    "images": [{ "src": "require('../data/images/cdclogodata.jpg')" }, { "src": "require('../data/images/Profiledata.png')" }]
+    "images": [{ "src": "../data/images/cdclogodata.jpg" }, { "src": "../data/images/Profiledata.png" }]
 }]

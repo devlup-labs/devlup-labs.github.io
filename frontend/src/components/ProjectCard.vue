@@ -37,7 +37,9 @@
 </template>
 
 <script>
-import dataProject from "../data/dataProject.json";
+/*import dataProject from "/frontend/data/dataProject.json";*/
+
+
   export default {
     name: "ProfileCard",
   props: {
@@ -46,7 +48,7 @@ import dataProject from "../data/dataProject.json";
   data() {
     return {
       show: false,
-      Projects: dataProject
+      Projects: {}
     }
   },
   computed: {

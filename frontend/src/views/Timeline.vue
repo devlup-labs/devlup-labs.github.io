@@ -7,11 +7,14 @@
 
 <script>
 import TimelineCard from "../components/TimelineCard.vue";
-import dataTimeline from "../data/dataTimeline.json";
+/*import dataTimeline from "/portfolio/frontend/data/dataTimeline.json";*/
+
 export default {
   name: "Timeline",
   components: { TimelineCard },
   data() {
+    var dataTimeline;
+    fetch("/data/dataTimeline.json").then(resp=>{dataTimeline=resp})
     return {
       drawer: null,
       timelineDetails : dataTimeline
