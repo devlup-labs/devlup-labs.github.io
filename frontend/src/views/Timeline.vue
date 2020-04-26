@@ -12,14 +12,13 @@ import TimelineCard from "../components/TimelineCard.vue";
 export default {
   name: "Timeline",
   components: { TimelineCard },
-  data() {
-    var dataTimeline;
-    fetch("/data/dataTimeline.json").then(resp=>{dataTimeline=resp})
-    return {
+  data: () => ({
       drawer: null,
-      timelineDetails : dataTimeline
-    };
+      timelineDetails : []
+    }),
+    created(){
+    fetch("/data/Timelines.json").then(resp => resp.json().then(list => this.timelineDetails=list))
   }
-};
+}
 </script>
 

@@ -42,14 +42,15 @@
 
   export default {
     name: "ProfileCard",
-  props: {
-    cardHeight: Number
-  },
-  data() {
-    return {
+    props: {
+      cardHeight: Number
+    },
+    data: () => ({
       show: false,
-      Projects: {}
-    }
+      Projects : []
+    }),
+    created(){
+    fetch("/data/Projects.json").then(resp => resp.json().then(list => this.Projects=list))
   },
   computed: {
     getProjectHeight() {
