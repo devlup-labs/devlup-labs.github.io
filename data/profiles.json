@@ -1,44 +1,55 @@
+
 [
   {
-    "Name": "Ajat Prabha",
-    "CurrentDesignation": "4th Yearite",
-    "DevlupDesignation": "Head",
+    "name": "Ajat Prabha",
+    "currentDesignation": "4th Yearite",
+    "devlupDesignation": "Head",
     "info": "All the info here.",
     "src": "../data/images/Profiledata.png",
-    "EmailLink": "#",
-    "GithubLink": "#",
-    "GitlabLink": "#",
-    "LinkedinLink": "#"
+    "links" : [
+      {"icon": "mdi-email", "href": "#","iconColor":"red" },
+      {"icon": "mdi-github", "href": "#","iconColor":"black" },
+      {"icon": "mdi-gitlab", "href": "#","iconColor":"orange" },
+      {"icon": "mdi-linkedin", "href": "#","iconColor":"blue" }
+    ]
   },
   {
-    "Name": "Anshul Ahuja",
-    "CurrentDesignation": "3rd Yearite",
-    "DevlupDesignation": "Head",
+    "name": "Anshul Ahuja",
+    "currentDesignation": "3rd Yearite",
+    "devlupDesignation": "Head",
     "info": "All the info here.",
     "src": "../data/images/Profiledata.png",
-    "EmailLink": "#",
-    "GithubLink": "#",
-    "GitlabLink": "#",
-    "LinkedinLink": "#"
+    "links" : [
+      {"icon": "mdi-email", "href": "#","iconColor":"red" },
+      {"icon": "mdi-github", "href": "#","iconColor":"black" },
+      {"icon": "mdi-gitlab", "href": "#","iconColor":"orange" },
+      {"icon": "mdi-linkedin", "href": "#","iconColor":"blue" }
+    ]
   },
   {
-    "Name": "Jash Patel",
-    "CurrentDesignation": "2nd Yearite",
-    "DevlupDesignation": "Senior",
+    "name": "Jash Patel",
+    "currentDesignation": "2nd Yearite",
+    "devlupDesignation": "Senior",
     "info": "All the info here.",
     "src": "../data/images/Profiledata.png",
-    "EmailLink": "#",
-    "GithubLink": "#",
-    "GitlabLink": "#"
+    "links" : [
+      {"icon": "mdi-email", "href": "#","iconColor":"red" },
+      {"icon": "mdi-github", "href": "#","iconColor":"black" },
+      {"icon": "mdi-gitlab", "href": "#","iconColor":"orange" },
+      {"icon": "mdi-linkedin", "href": "#","iconColor":"blue" }
+    ]
   },
   {
-    "Name": "Sandesh Singh",
-    "CurrentDesignation": "1st Yearite",
-    "DevlupDesignation": "Member",
+    "name": "Sandesh Singh",
+    "currentDesignation": "1st Yearite",
+    "devlupDesignation": "Member",
     "info": "All the info here.",
     "src": "../data/images/Profiledata.png",
-    "EmailLink": "#",
-    "GithubLink": "#",
-    "LinkedinLink": "#"
+    "links" : [
+      {"icon": "mdi-email", "href": "#","iconColor":"red" },
+      {"icon": "mdi-github", "href": "#","iconColor":"black" },
+      {"icon": "mdi-gitlab", "href": "#","iconColor":"orange" },
+      {"icon": "mdi-linkedin", "href": "#","iconColor":"blue" }
+    ]
   }
 ]
