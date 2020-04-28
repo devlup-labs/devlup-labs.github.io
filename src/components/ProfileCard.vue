@@ -23,7 +23,7 @@ v-row(justify='left')
                 v-col.pt-1.pa-0(cols="1")    
                   v-icon(@click="pageNo = 2" color="basic") mdi-arrow-right-box
           v-stepper-content.pa-1(step="2")
-            v-card(height="96px")
+            v-card(height="97px")
               v-row
                 v-col(cols="1")
                   v-icon(@click="pageNo = 1" color="basic") mdi-arrow-left-box
