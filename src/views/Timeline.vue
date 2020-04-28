@@ -6,8 +6,7 @@
 </template>
 
 <script>
-import TimelineCard from "../components/TimelineCard.vue";
-/*import dataTimeline from "/portfolio/frontend/data/dataTimeline.json";*/
+import TimelineCard from "../components/TimelineCard";
 
 export default {
   name: "Timeline",
