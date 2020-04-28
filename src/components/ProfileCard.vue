@@ -1,11 +1,11 @@
 <template lang="pug">
 v-row(justify='left')
   v-col
-    v-card.elevation-5(:width="1.05*getProfileWidth")
+    v-card.elevation-5(:width="1.08*getProfileWidth")
       v-stepper(v-model="pageNo")
         v-stepper-items
           v-stepper-content.pa-0(step="1")
-            v-card.pl-3(:width="getProfileWidth" flat)
+            v-card(:width="getProfileWidth" flat)
               v-row 
                 v-col(cols="4" style="background-color:#1b65c4") 
                   v-avatar(:size="(4/15)*getProfileWidth")
