@@ -14,31 +14,30 @@ div#inspire(style="margin-top:-50pt")
 </template>
 
 <style>
-#inspire{
-  background-image:url("../assets/bg.svg");
+#inspire {
+  background-image: url("../assets/bg.svg");
   background-repeat: no-repeat;
   background-size: 40%;
-  background-position:right top;
+  background-position: right top;
 }
 
-@media screen and (max-width: 1264px) and (min-width: 800px){
-  #inspire{
-      background-size: 45%;
+@media screen and (max-width: 1264px) and (min-width: 800px) {
+  #inspire {
+    background-size: 45%;
   }
 }
-@media screen and (max-width: 799px) and (min-width: 415px){
-  #inspire{
-      background-size: 50%;
+@media screen and (max-width: 799px) and (min-width: 415px) {
+  #inspire {
+    background-size: 50%;
   }
 }
-@media (max-width:414px){
-#inspire{
-      background-size: 65%;
+@media (max-width: 414px) {
+  #inspire {
+    background-size: 65%;
   }
 }
 </style>
 
 <script>
-export default {
-};
+export default {};
 </script>

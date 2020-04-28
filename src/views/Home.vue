@@ -3,7 +3,6 @@
 </template>
 
 <script>
-
 import HomeLanding from "../components/HomeLanding";
 export default {
   name: "Home",

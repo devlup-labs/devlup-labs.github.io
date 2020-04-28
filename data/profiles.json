@@ -1,0 +1,44 @@
+[
+  {
+    "Name": "Ajat Prabha",
+    "CurrentDesignation": "4th Yearite",
+    "DevlupDesignation": "Head",
+    "info": "All the info here.",
+    "src": "../data/images/Profiledata.png",
+    "EmailLink": "#",
+    "GithubLink": "#",
+    "GitlabLink": "#",
+    "LinkedinLink": "#"
+  },
+  {
+    "Name": "Anshul Ahuja",
+    "CurrentDesignation": "3rd Yearite",
+    "DevlupDesignation": "Head",
+    "info": "All the info here.",
+    "src": "../data/images/Profiledata.png",
+    "EmailLink": "#",
+    "GithubLink": "#",
+    "GitlabLink": "#",
+    "LinkedinLink": "#"
+  },
+  {
+    "Name": "Jash Patel",
+    "CurrentDesignation": "2nd Yearite",
+    "DevlupDesignation": "Senior",
+    "info": "All the info here.",
+    "src": "../data/images/Profiledata.png",
+    "EmailLink": "#",
+    "GithubLink": "#",
+    "GitlabLink": "#"
+  },
+  {
+    "Name": "Sandesh Singh",
+    "CurrentDesignation": "1st Yearite",
+    "DevlupDesignation": "Member",
+    "info": "All the info here.",
+    "src": "../data/images/Profiledata.png",
+    "EmailLink": "#",
+    "GithubLink": "#",
+    "LinkedinLink": "#"
+  }
+]

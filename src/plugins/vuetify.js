@@ -1,6 +1,5 @@
 import Vue from "vue";
-import Vuetify from "vuetify";
-import "vuetify/dist/vuetify.min.css";
+import Vuetify from "vuetify/lib";
 
 Vue.use(Vuetify);
 
@@ -10,7 +9,7 @@ export default new Vuetify({
       customProperties: true,
       cards: {
         ProjectHeight: 300,
-        ProfileWidth: 300,
+        ProfileWidth: 300
       }
     },
     themes: {
@@ -21,8 +20,7 @@ export default new Vuetify({
         error: "#FF5252",
         info: "#2196F3",
         success: "#4CAF50",
-        warning: "#FFC107",
-        basic: "#1b65c4"
+        warning: "#FFC107"
       }
     }
   }

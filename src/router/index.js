@@ -1,9 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Profile from "../views/Profile.vue";
-import Project from "../views/Project.vue";
-import Timeline from "../views/Timeline.vue";
+import Profile from "../views/Profile";
+import Project from "../views/Project";
+import Timeline from "../views/Timeline";
 
 Vue.use(VueRouter);
 
@@ -12,16 +12,6 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home
-  },
-  {
-    path: "/profile",
-    name: "Profile",
-    component: Profile
-  },
-  {
-    path: "/project",
-    name: "Project",
-    component: Project
   },
   {
     path: "/about",
@@ -51,9 +41,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-    mode: "history",
-    base: process.env.BASE_URL,
-    routes
+  routes
 });
 
 export default router;

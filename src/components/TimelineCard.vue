@@ -21,12 +21,10 @@ div
 export default {
   name: "TimelineCard",
   props: ["timelineDetails"],
-  methods:{
-    checkOrientation(index){
-      if(index%2)
-        return 'right'
-      else
-        return 'left'
+  methods: {
+    checkOrientation(index) {
+      if (index % 2) return "right";
+      else return "left";
     }
   }
 };
