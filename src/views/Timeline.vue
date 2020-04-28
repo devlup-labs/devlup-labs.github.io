@@ -2,16 +2,16 @@
   v-row.justify-center
     v-col(cols='12', md='8')
       v-timeline(:dense='$vuetify.breakpoint.smAndDown')
-        TimelineCard(:timelineDetails='timelineDetails')
+        TimelineCardcomp(:timelineDetails='timelineDetails')
 </template>
 
 <script>
-import TimelineCard from "../components/TimelineCard";
+import TimelineCardcomp from "../components/TimelineCardcomp";
 /*import dataTimeline from "/portfolio/frontend/data/dataTimeline.json";*/
 
 export default {
   name: "Timeline",
-  components: { TimelineCard },
+  components: { TimelineCardcomp },
   data: () => ({
     drawer: null,
     timelineDetails: []
