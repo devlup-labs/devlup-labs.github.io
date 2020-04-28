@@ -2,7 +2,7 @@
 div(align='center', justify='center')
   v-container
     v-row(justify='left')
-      v-flex.mb-10(v-for='Profile in Profiles',xs12='',sm12='', md6='',lg4='',xl4='')
+      v-flex.mb-10(v-for='Profile in Profiles', :key='Profile.name',xs12='',sm12='', md6='',lg4='',xl4='')
         ProfileCard(:Profile='Profile')
 </template>
 
@@ -10,12 +10,14 @@ div(align='center', justify='center')
 import ProfileCard from "../components/ProfileCard";
 export default {
   name: "Profile",
-  components: {ProfileCard},
+  components: { ProfileCard },
   data: () => ({
-      Profiles : []
-    }),
-    created(){
-    fetch("/data/Profiles.json").then(resp => resp.json().then(list => this.Profiles=list))
+    Profiles: []
+  }),
+  created() {
+    fetch("/data/Profiles.json").then(resp =>
+      resp.json().then(list => (this.Profiles = list))
+    );
   }
-}
+};
 </script>

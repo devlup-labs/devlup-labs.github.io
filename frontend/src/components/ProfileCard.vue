@@ -35,16 +35,18 @@ v-row(justify='left')
                 v-col(cols="11")  {{ Profile.info }}
 </template>
 <script>
-  export default {
-    name: "ProfileCard",
-    props:["Profile"],
-    data: ()=> ({
-      e1: 1,    
-    }),
-    computed: {
+export default {
+  name: "ProfileCard",
+  props: ["Profile"],
+  data: () => ({
+    e1: 1
+  }),
+  computed: {
     getProfileWidth() {
-      return this.ProfileWidth || this.$vuetify.theme.options.cards.ProfileWidth;
+      return (
+        this.ProfileWidth || this.$vuetify.theme.options.cards.ProfileWidth
+      );
     }
-  } 
-}
+  }
+};
 </script>

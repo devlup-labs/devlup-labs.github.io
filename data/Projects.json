@@ -5,15 +5,25 @@
         "GithubLink": "#",
         "WebLink": "#",
         "links": [{ "name": "vue" }, { "name": "html" }, { "name": "javascript" }],
-        "images": [{ "src": "../data/images/cdclogodata.jpg" }, { "src": "../data/images/Profiledata.png" }]
+        "images": [
+            { "src": "../data/images/cdclogodata.jpg" },
+            { "src": "../data/images/Profiledata.png" }
+        ]
     },
     {
         "name": "Student Gymkhana",
         "description": "Interface for IITJ's very own student gymkhana.",
         "info": "This is a web portal for automating the placement procedure. The above mentioned technology stack was used.",
         "GithubLink": "#",
-        "links": [{ "name": "python" }, { "name": "html" }, { "name": "javascript" }],
-        "images": [{ "src": "../data/images/cdclogodata.jpg" }, { "src": "../data/images/Profiledata.png" }]
+        "links": [
+            { "name": "python" },
+            { "name": "html" },
+            { "name": "javascript" }
+        ],
+        "images": [
+            { "src": "../data/images/cdclogodata.jpg" },
+            { "src": "../data/images/Profiledata.png" }
+        ]
     },
     {
         "name": "Portfolio",
@@ -21,15 +31,29 @@
         "info": "This is a web portal for automating the placement procedure. The above mentioned technology stack was used.",
         "GithubLink": "#",
         "WebLink": "#",
-        "links": [{ "name": "vuetify" }, { "name": "django" }, { "name": "javascript" }],
-        "images": [{ "src": "../data/images/cdclogodata.jpg" }, { "src": "../data/images/Profiledata.png" }]
+        "links": [
+            { "name": "vuetify" },
+            { "name": "django" },
+            { "name": "javascript" }
+        ],
+        "images": [
+            { "src": "../data/images/cdclogodata.jpg" },
+            { "src": "../data/images/Profiledata.png" }
+        ]
     },
     {
         "name": "CDC Portal",
         "description": "A portal for handling student  placements",
         "info": "This is a web portal for automating the placement procedure. The above mentioned technology stack was used.",
         "WebLink": "#",
-        "links": [{ "name": "python" }, { "name": "html" }, { "name": "javascript" }],
-        "images": [{ "src": "../data/images/cdclogodata.jpg" }, { "src": "../data/images/Profiledata.png" }]
+        "links": [
+            { "name": "python" },
+            { "name": "html" },
+            { "name": "javascript" }
+        ],
+        "images": [
+            { "src": "../data/images/cdclogodata.jpg" },
+            { "src": "../data/images/Profiledata.png" }
+        ]
     }
 ]

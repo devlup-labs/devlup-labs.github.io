@@ -13,12 +13,13 @@ export default {
   name: "Timeline",
   components: { TimelineCard },
   data: () => ({
-      drawer: null,
-      timelineDetails : []
-    }),
-    created(){
-    fetch("/data/Timelines.json").then(resp => resp.json().then(list => this.timelineDetails=list))
+    drawer: null,
+    timelineDetails: []
+  }),
+  created() {
+    fetch("/data/Timelines.json").then(resp =>
+      resp.json().then(list => (this.timelineDetails = list))
+    );
   }
-}
+};
 </script>
-

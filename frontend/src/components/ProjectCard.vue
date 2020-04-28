@@ -27,17 +27,20 @@ v-row(align='center', justify='left')
 
 <script>
 /*import dataProject from "/frontend/data/dataProject.json";*/
-  export default {
-    name: "ProfileCard",
-    props:["Project"],
-    data() {
+export default {
+  name: "ProfileCard",
+  props: ["Project"],
+  data() {
     return {
-      show: false,}
-    },
-    computed: {
+      show: false
+    };
+  },
+  computed: {
     getProjectHeight() {
-      return this.ProjectHeight || this.$vuetify.theme.options.cards.ProjectHeight;
+      return (
+        this.ProjectHeight || this.$vuetify.theme.options.cards.ProjectHeight
+      );
     }
-  } 
-}
+  }
+};
 </script>

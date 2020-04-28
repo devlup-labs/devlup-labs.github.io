@@ -10,12 +10,14 @@ div(align='center', justify='center')
 import ProjectCard from "../components/ProjectCard";
 export default {
   name: "Project",
-  components: {ProjectCard},
+  components: { ProjectCard },
   data: () => ({
-      Projects : [],
-    }),
-    created(){
-    fetch("/data/Projects.json").then(resp => resp.json().then(list => this.Projects=list))
+    Projects: []
+  }),
+  created() {
+    fetch("/data/Projects.json").then(resp =>
+      resp.json().then(list => (this.Projects = list))
+    );
   }
-}
+};
 </script>
