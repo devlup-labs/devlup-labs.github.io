@@ -7,7 +7,6 @@
 
 <script>
 import TimelineCard from "../components/TimelineCard";
-/*import dataTimeline from "/portfolio/frontend/data/dataTimeline.json";*/
 
 export default {
   name: "Timeline",
