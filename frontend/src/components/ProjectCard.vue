@@ -9,7 +9,7 @@ v-row(align='center', justify='left')
         h5.pa-1.d-inline-blocktext-truncate(style='height:50px') {{ Project.description }}
         v-divider
         v-flex.pa-1
-          v-chip.pa-2.ma-1(v-for='link in Project.links', :key='link.name', label='label', small='small') {{ link.name }} 
+          v-chip.pa-2.ma-1(v-for='tag in Project.tags', :key='tag.name', label='label', small='small') {{ tag.name }} 
           v-btn(icon='icon', @click='show = !show')
             v-icon {{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}
         v-expand-transition

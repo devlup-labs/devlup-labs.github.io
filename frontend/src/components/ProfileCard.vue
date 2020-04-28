@@ -1,8 +1,8 @@
 <template lang="pug">
 v-row(justify='left')
-  v-flex
+  v-col
     v-card.elevation-5(:width="1.05*getProfileWidth")
-      v-stepper(v-model="e1")
+      v-stepper(v-model="pageNo")
         v-stepper-items
           v-stepper-content.pa-0(step="1")
             v-card.pl-3(:width="getProfileWidth" flat)
@@ -26,12 +26,12 @@ v-row(justify='left')
                     v-btn(:href="Profile.LinkedinLink" icon small v-if="Profile.LinkedinLink")
                       v-icon(color="blue") mdi-linkedin     
                 v-col.pt-1.pa-0(cols="1")    
-                  v-icon(@click="e1 = 2" color="basic") mdi-arrow-right-box
+                  v-icon(@click="pageNo = 2" color="basic") mdi-arrow-right-box
           v-stepper-content.pa-1(step="2")
             v-card(height="96px")
               v-row
                 v-col(cols="1")
-                  v-icon(@click="e1 = 1" color="basic") mdi-arrow-left-box
+                  v-icon(@click="pageNo = 1" color="basic") mdi-arrow-left-box
                 v-col(cols="11")  {{ Profile.info }}
 </template>
 <script>
@@ -39,7 +39,7 @@ export default {
   name: "ProfileCard",
   props: ["Profile"],
   data: () => ({
-    e1: 1
+    pageNo: 1
   }),
   computed: {
     getProfileWidth() {

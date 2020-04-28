@@ -4,7 +4,7 @@
         "info": "This is a web portal for automating the placement procedure. The above mentioned technology stack was used.",
         "GithubLink": "#",
         "WebLink": "#",
-        "links": [{ "name": "vue" }, { "name": "html" }, { "name": "javascript" }],
+        "tags": [{ "name": "vue" }, { "name": "html" }, { "name": "javascript" }],
         "images": [
             { "src": "../data/images/cdclogodata.jpg" },
             { "src": "../data/images/Profiledata.png" }
@@ -15,7 +15,7 @@
         "description": "Interface for IITJ's very own student gymkhana.",
         "info": "This is a web portal for automating the placement procedure. The above mentioned technology stack was used.",
         "GithubLink": "#",
-        "links": [
+        "tags": [
             { "name": "python" },
             { "name": "html" },
             { "name": "javascript" }
@@ -31,7 +31,7 @@
         "info": "This is a web portal for automating the placement procedure. The above mentioned technology stack was used.",
         "GithubLink": "#",
         "WebLink": "#",
-        "links": [
+        "tags": [
             { "name": "vuetify" },
             { "name": "django" },
             { "name": "javascript" }
@@ -46,7 +46,7 @@
         "description": "A portal for handling student  placements",
         "info": "This is a web portal for automating the placement procedure. The above mentioned technology stack was used.",
         "WebLink": "#",
-        "links": [
+        "tags": [
             { "name": "python" },
             { "name": "html" },
             { "name": "javascript" }

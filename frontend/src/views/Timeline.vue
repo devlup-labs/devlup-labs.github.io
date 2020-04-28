@@ -17,7 +17,7 @@ export default {
     timelineDetails: []
   }),
   created() {
-    fetch("/data/Timelines.json").then(resp =>
+    fetch("/data/timelines.json").then(resp =>
       resp.json().then(list => (this.timelineDetails = list))
     );
   }
