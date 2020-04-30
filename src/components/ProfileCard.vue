@@ -1,7 +1,7 @@
 <template lang="pug">
 v-row(justify='left')
   v-col
-    v-card.elevation-5(:width="1.05*getProfileWidth")
+    v-card.elevation-5(:width="1.08*getProfileWidth")
       v-stepper(v-model="pageNo")
         v-stepper-items
           v-stepper-content.pa-0(step="1")
@@ -16,12 +16,10 @@ v-row(justify='left')
                       u {{ Profile.name }}
                     h6 Current position : {{ Profile.currentDesignation }}
                     h6 Position in DevlUp : {{Profile.devlupDesignation }}
-                  v-row
-                    v-flex.mt-1.ml-1.mr-(-1)(v-for='link in Profile.links', :key='link.name',:color='link.iconColor')
-                        v-btn(:href="link.href" icon small)
-                          v-icon(:color='link.iconColor') {{link.icon}}
-                v-col.pt-1.pa-0(cols="1")    
-                  v-icon(@click="pageNo = 2" color="basic") mdi-arrow-right-box
+                  v-row.ml-1
+                    v-btn(v-for='link in Profile.links', :key='link.name',:color='link.iconColor',:href="link.href" icon small)
+                      v-icon(:color='link.iconColor') {{link.icon}}
+                v-icon(@click="pageNo = 2" color="basic",size="25") mdi-arrow-right-box
           v-stepper-content.pa-1(step="2")
             v-card(height="97px")
               v-row
