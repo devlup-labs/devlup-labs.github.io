@@ -11,37 +11,49 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    component: Home,
+    meta: { title: "DevlUp Portfolio" }
   },
   {
     path: "/about",
     name: "About",
-    component: Home
+    component: Home,
+    meta: { title: "About Us" }
   },
   {
     path: "/projects",
     name: "Projects",
-    component: Project
+    component: Project,
+    meta: { title: "Our Projects" }
   },
   {
     path: "/timeline",
     name: "Timeline",
-    component: Timeline
+    component: Timeline,
+    meta: { title: "Timeline" }
   },
   {
     path: "/blog",
     name: "Blog",
-    component: Home
+    component: Home,
+    meta: { title: "DevlUp's Blog" }
   },
   {
     path: "/team",
     name: "Team",
-    component: Profile
+    component: Profile,
+    meta: { title: "Our Team" }
   }
 ];
 
 const router = new VueRouter({
   routes
+});
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title;
+
+  next();
 });
 
 export default router;
