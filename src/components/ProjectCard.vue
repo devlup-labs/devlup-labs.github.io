@@ -16,11 +16,11 @@ v-row(align='center', justify='left')
           div(v-show='show')
             h6.pa-1 {{ Project.info }}
         v-row.justify-space-around
-          v-col(cols='5', v-if='Project.GithubLink')
-            v-btn.ml-1.mr-1(:href='Project.GithubLink', dark='dark', block='block')
+          v-col(cols='5', v-if='Project.githubLink')
+            v-btn.ml-1.mr-1(:href='Project.githubLink', dark='dark', block='block')
               v-icon mdi-github 
-          v-col(cols='5', v-if='Project.WebLink')
-            v-btn.ml-1.mr-1(:href='Project.WebLink', block='block')
+          v-col(cols='5', v-if='Project.webLink')
+            v-btn.ml-1.mr-1(:href='Project.webLink', block='block')
               v-icon mdi-web 
      
 </template>
