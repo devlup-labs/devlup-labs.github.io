@@ -1,4 +1,5 @@
 <template lang="pug">
+  body(style='overflow-x: hidden;position: relative;')
     v-app
         PageHeader(style="z-index:5")
         v-content
