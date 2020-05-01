@@ -1,7 +1,7 @@
 <template lang="pug">
 v-row(justify='left')
   v-col
-    v-card.elevation-5(:width="1.08*getProfileWidth")
+    v-card.elevation-5(:width="1.05*getProfileWidth")
       v-stepper(v-model="pageNo")
         v-stepper-items
           v-stepper-content.pa-0(step="1")

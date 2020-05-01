@@ -15,6 +15,7 @@ div
           v-btn.mb-2.mt-2(small='small', style="flex-direction:column;",:color='timelineDetail.colorClass', dark='dark', v-if='timelineDetail.firstButtonLink') {{ timelineDetail.firstButtonText }}
         a(:href='timelineDetail.secondButtonLink',style='text-decoration:none;',v-if='timelineDetail.secondButtonLink')
           v-btn.ml-2.mb-2.mt-2(small='small', :color='timelineDetail.colorClass', dark='dark', v-if='timelineDetail.secondButtonLink') {{ timelineDetail.secondButtonText }}
+
 </template>
 
 <script>
