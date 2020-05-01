@@ -19,12 +19,12 @@ v-row(justify='left')
                   v-row.ml-1
                     v-btn(v-for='link in Profile.links', :key='link.name',:color='link.iconColor',:href="link.href" icon small)
                       v-icon(:color='link.iconColor') {{link.icon}}
-                v-icon(@click="pageNo = 2" color="basic",size="25") mdi-arrow-right-box
+                v-icon(@click="pageNo = 2" color="basic",size="25") mdi-chevron-right-box
           v-stepper-content.pa-1(step="2")
             v-card(height="97px")
               v-row
                 v-col(cols="1")
-                  v-icon(@click="pageNo = 1" color="basic") mdi-arrow-left-box
+                  v-icon(@click="pageNo = 1" color="basic") mdi-chevron-left-box
                 v-col(cols="11")  {{ Profile.info }}
 </template>
 <script>
