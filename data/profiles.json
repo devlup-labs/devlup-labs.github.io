@@ -21,6 +21,8 @@
     "src": "../data/images/Profiledata.png",
     "links" : [
       {"icon": "mdi-email", "href": "#","iconColor":"red" },
+      {"icon": "mdi-github", "href": "#","iconColor":"black" },
+      {"icon": "mdi-gitlab", "href": "#","iconColor":"orange" },
       {"icon": "mdi-linkedin", "href": "#","iconColor":"blue" }
     ]
   },

@@ -2,9 +2,18 @@
         "name": "TA Portal",
         "description": "Handling all TA related tasks",
         "info": "This is a web portal for automating the placement procedure. The above mentioned technology stack was used.",
+        <<
+        <<
+        << < HEAD "GithubLink": "#",
+        "WebLink": "#",
+        ===
+        ===
+        =
         "githubLink": "#",
         "webLink": "#",
-        "tags": [{ "name": "vue" }, { "name": "html" }, { "name": "javascript" }],
+        >>>
+        >>>
+        > 047 c3f350dc301168f49e558fc4f810388771028 "tags": [{ "name": "vue" }, { "name": "html" }, { "name": "javascript" }],
         "images": [
             { "src": "../data/images/cdclogodata.jpg" },
             { "src": "../data/images/Profiledata.png" }
@@ -14,8 +23,16 @@
         "name": "Student Gymkhana",
         "description": "Interface for IITJ's very own student gymkhana.",
         "info": "This is a web portal for automating the placement procedure. The above mentioned technology stack was used.",
+        <<
+        <<
+        << < HEAD "GithubLink": "#",
+        ===
+        ===
+        =
         "githubLink": "#",
-        "tags": [
+        >>>
+        >>>
+        > 047 c3f350dc301168f49e558fc4f810388771028 "tags": [
             { "name": "python" },
             { "name": "html" },
             { "name": "javascript" }
@@ -45,8 +62,16 @@
         "name": "CDC Portal",
         "description": "A portal for handling student  placements",
         "info": "This is a web portal for automating the placement procedure. The above mentioned technology stack was used.",
+        <<
+        <<
+        << < HEAD "WebLink": "#",
+        ===
+        ===
+        =
         "webLink": "#",
-        "tags": [
+        >>>
+        >>>
+        > 047 c3f350dc301168f49e558fc4f810388771028 "tags": [
             { "name": "python" },
             { "name": "html" },
             { "name": "javascript" }
