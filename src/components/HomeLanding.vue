@@ -1,8 +1,8 @@
 <template lang="pug">
-div#inspire(style="margin-top:-50pt")
+div#inspire(style="margin-top:-50pt; height:100%;")
   v-content.pa-0(style="height:100%;")
-    v-container.mt-12.mt-sm-0.pt-sm-3.pt-12(style='z-index:1 ; height:100%;')
-      v-row.mt-12.mt-sm-0.pt-sm-0.pt-12.px-4(align='center' justify='center' style='height:100%')
+    v-container(style='z-index:1 ; height:100%;')
+      v-row.px-4(align='center' justify='center' style='height:100%')
         v-col.text-left.px-md-3.px-10(sm='7' cols='12' :style="[$vuetify.breakpoint.lgAndUp ? 'margin-top:180pt' : 'margin-top:40 px']")
           .pl-md-10.pr-sm-7
             h1.font-weight-bold.mb-1.mb-sm-5(:class="[$vuetify.breakpoint.lgAndUp ? 'display-3' :'display-2']") DevlUp Labs
