@@ -16,17 +16,15 @@ v-row(justify='left')
                       u {{ Profile.name }}
                     h6 Current position : {{ Profile.currentDesignation }}
                     h6 Position in DevlUp : {{Profile.devlupDesignation }}
-                  v-row
-                    v-flex.mt-1.ml-1.mr-(-1)(v-for='link in Profile.links', :key='link.name',:color='link.iconColor')
-                        v-btn(:href="link.href" icon small)
-                          v-icon(:color='link.iconColor') {{link.icon}}
-                v-col.pt-1.pa-0(cols="1")    
-                  v-icon(@click="pageNo = 2" color="basic") mdi-arrow-right-box
-          v-stepper-content.pa-1(step="2")
-            v-card(height="97px")
-              v-row
+                  v-row.ml-1
+                    v-btn(v-for='link in Profile.links', :key='link.name',:color='link.iconColor',:href="link.href" icon small)
+                      v-icon(:color='link.iconColor') {{link.icon}}
+                v-icon(@click="pageNo = 2" color="basic") mdi-chevron-right
+          v-stepper-content.pb-1.pt-1.pl-1(step="2")
+            v-card(height="96px")
+              v-row(align='center', justify='center')
                 v-col(cols="1")
-                  v-icon(@click="pageNo = 1" color="basic") mdi-arrow-left-box
+                  v-icon.mt-6(@click="pageNo = 1" color="basic") mdi-chevron-left
                 v-col(cols="11")  {{ Profile.info }}
 </template>
 <script>
