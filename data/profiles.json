@@ -15,9 +15,9 @@
   },
   {
     "name": "Anshul Ahuja",
-    "currentDesignation": "3rd Yearite",
-    "devlupDesignation": "Head",
-    "info": "All the info here.",
+    "currentDesignation": "Intern at Microsoft",
+    "devlupDesignation": "Head/Mentor",
+    "info": "All the info here.All the info here.All the info here.All the info here.",
     "src": "../data/images/Profiledata.png",
     "links" : [
       {"icon": "mdi-email", "href": "#","iconColor":"red" },
@@ -31,7 +31,7 @@
     "currentDesignation": "2nd Yearite",
     "devlupDesignation": "Senior",
     "info": "All the info here.",
-    "src": "../data/images/Profiledata.png",
+    "src": "../data/images/Jash.jpg",
     "links" : [
       {"icon": "mdi-email", "href": "#","iconColor":"red" },
       {"icon": "mdi-github", "href": "#","iconColor":"black" },
