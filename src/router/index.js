@@ -12,7 +12,7 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
-    meta: { title: "DevlUp Portfolio" }
+    meta: { title: "DevlUp Labs" }
   },
   {
     path: "/about",
@@ -24,7 +24,7 @@ const routes = [
     path: "/projects",
     name: "Projects",
     component: Project,
-    meta: { title: "Our Projects" }
+    meta: { title: "Projects" }
   },
   {
     path: "/timeline",
@@ -36,13 +36,13 @@ const routes = [
     path: "/blog",
     name: "Blog",
     component: Home,
-    meta: { title: "DevlUp's Blog" }
+    meta: { title: "Blog" }
   },
   {
     path: "/team",
     name: "Team",
     component: Profile,
-    meta: { title: "Our Team" }
+    meta: { title: "Team" }
   }
 ];
 
