@@ -4,7 +4,7 @@ import Home from "../views/Home.vue";
 import Profile from "../views/Profile";
 import Project from "../views/Project";
 import Timeline from "../views/Timeline";
-
+import Blog from "../views/Blog";
 Vue.use(VueRouter);
 
 const routes = [
@@ -35,8 +35,8 @@ const routes = [
   {
     path: "/blog",
     name: "Blog",
-    component: Home,
-    meta: { title: "Blog" }
+    component: Blog,
+    meta: { title: " Our Blog" }
   },
   {
     path: "/team",
