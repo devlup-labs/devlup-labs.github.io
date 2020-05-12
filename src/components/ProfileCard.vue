@@ -24,7 +24,7 @@ v-row(justify='left')
             v-card(height="105px")
               v-row(align='center', justify='center')
                 v-col(cols="1")
-                  v-icon.mt-6(@click="pageNo = 1" color="basic") mdi-chevron-left
+                  v-icon.mt-6(@click="pageNo = 1" color="#1b65c4") mdi-chevron-left
                 v-col(cols="11")  {{ Profile.info }}
 </template>
 <script>
