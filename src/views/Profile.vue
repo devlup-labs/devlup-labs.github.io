@@ -2,7 +2,7 @@
 div(align='center', justify='center')
   v-container
     v-row(justify='left')
-      v-flex.mb-10(v-for='Profile in profiles', :key='Profile.name',xs12='',sm12='', md6='',lg4='',xl4='')
+      v-flex.mb-10(v-for='Profile in profiles', :key='Profile.name',xs12='',sm12='', md6='',lg4='',xl='')
         ProfileCard(:Profile='Profile')
 </template>
 
