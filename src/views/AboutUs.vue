@@ -11,10 +11,10 @@
             p.title(style="text-align: left;") {{desc}}
             v-list-item-group(v-model='item' color='primary')
               v-list-item(v-for='(item, i) in items' :key='i')
-                v-list-item-icon.text-center
+                v-list-item-icon.text-left
                   v-icon mdi-compass
-                v-list-item-content.text-center
-                  v-list-item-title.text-center(v-text='item.text')
+                v-list-item-content.text-left
+                  v-list-item-title.text-left(v-text='item.text')
       v-flex(xs12='',sm12='', md4='',lg4='',xl4='') 
         h2.mt-1.ml-2 What We Do
         v-row.mt-5(justify='space-around')
