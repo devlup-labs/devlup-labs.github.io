@@ -30,6 +30,7 @@ export default {
         { text: "Projects", icon: "mdi-briefcase-edit-outline" },
         { text: "Timeline", icon: "mdi-timeline-text" },
         { text: "Blog", icon: "mdi-forum" },
+        { text: "Videos", icon: "mdi-television" },
         { text: "Team", icon: "mdi-human-male-male" }
       ]
     };

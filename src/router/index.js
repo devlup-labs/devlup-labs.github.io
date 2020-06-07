@@ -6,6 +6,7 @@ import Profile from "../views/Profile";
 import Project from "../views/Project";
 import Timeline from "../views/Timeline";
 import Blog from "../views/Blog";
+import Videos from "../views/Videos";
 Vue.use(VueRouter);
 
 const routes = [
@@ -38,6 +39,12 @@ const routes = [
     name: "Blog",
     component: Blog,
     meta: { title: " Our Blog" }
+  },
+  {
+    path: "/videos",
+    name: "Videos",
+    component: Videos,
+    meta: { title: " Videos" }
   },
   {
     path: "/team",
