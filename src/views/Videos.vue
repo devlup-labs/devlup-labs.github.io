@@ -2,10 +2,11 @@
 div(align='center')
   v-container
     v-row.mt-9
-      v-flex.mb-6(v-for='tutorial in tutorials', :key='tutorial.name', xs12='',sm12='', md6='',lg4='',xl4='')
+      v-flex.mb-6(v-for='tutorial in tutorials', :key='tutorial.name', xs12='',sm12='', md6='',lg6='',xl4='')
         VideoCard(:tutorial='tutorial')
     v-btn(color='#1b65c4' dark='' large href="https://www.youtube.com/channel/UCFaRxxB8-BB5GXH-wlwGqIw") Our Channel
 </template>
+
 <script>
 import VideoCard from "../components/VideoCard";
 export default {
