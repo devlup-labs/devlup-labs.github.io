@@ -1,6 +1,6 @@
 <template lang="pug">
     div
-        v-app-bar(app clipped-right flat floating style="opacity:0.7")
+        v-app-bar(app clipped-right flat floating style="opacity:1.0")
             v-app-bar-nav-icon.hidden-md-and-up(@click.stop="drawer = !drawer")
             v-avatar(size="48px")
                 v-img(src="../assets/logo.jpeg")
