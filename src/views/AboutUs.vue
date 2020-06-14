@@ -1,77 +1,103 @@
 <template lang="pug">
-  v-container(grid-list-md='')
-    v-layout(row='' wrap='')
-      v-flex(xs12='')
-            v-card.mb-5(style='border: 5px solid #1b65c4')
-              v-card-text.display-1.text-center
-                | About Us
-      v-flex(xs12='',sm12='', md8='',lg8='',xl8='')
-        v-card.mx-auto.mt-4(max-width='100%' tile='')
-          v-list.pa-3.ma-3(rounded='')
-            p.title(style="text-align: left;") {{desc}}
-            v-list-item-group(v-model='item' color='primary')
-              v-list-item(v-for='(item, i) in items' :key='i')
-                v-list-item-icon.text-left
-                  v-icon {{item.icon}}
-                v-list-item-content.text-left
-                  v-list-item-title.text-left(v-text='item.heading')
-                  v-list-item-subtitle.text-left(v-text='item.subheading')
+v-container(fluid='' style='margin: 0px; padding: 0px; width: 100%;')
+  v-layout(row='' wrap='')
+    v-container(fluid='' style='margin: 0px; padding: 0px; width: 100%;background-color: #1b65c4;')
+      v-row
+        v-col(cols="8")
+          v-container()  
+            h1.pa-3(style="text-align: center;color:#fff") About Us
+            h3.font-weight-regular.mb-n.pa-5.ml-3.mr-3.mt-n2(style="text-align: left;color:#fff") {{desc1}}
+            h3.font-weight-regular.mb-n.pl-5.pr-5.ml-3.mr-3(style="text-align: left;color:#fff") {{desc2}}
+        v-col(cols="4")
+          v-img.mt-5(src='../assets/favicon.png' aspect-ratio='2')
+    v-container()      
+      h1.pa-3.rounded-lg.text-center.grey.lighten-2(style="text-align: center;color:#1b65c4") Guiding Principles
+      v-flex(v-for='item in items', :key='item.name',xs12='',sm12='', md12='',lg12='',xl12='')
+        div(v-if="item.direction === 'left'")
+          v-row
+            v-flex(xs12='',sm12='', md4='',lg4='',xl4='')
+              v-img.mt-5.ml-3.mr-n3(:src="item.src" contain aspect-ratio='2.5')
+            v-flex(xs12='',sm12='', md8='',lg8='',xl8='')    
+                v-container()  
+                  h1.font-weight-medium.pa-3(style="text-align: center;color:#000") {{item.heading}}
+                  h3.font-weight-light.mb-n.pa-3(style="text-align: center;color:#000") {{item.subheading}}   
+        div(v-if="item.direction === 'right'")
+          v-layout(v-if='$vuetify.breakpoint.smAndDown')
+            v-row
+              v-flex(xs12='',sm12='', md4='',lg4='',xl4='')
+                v-img.mt-5.ml-n3.mr-3(:src="item.src" contain aspect-ratio='2.5')
+              v-flex(xs12='',sm12='', md8='',lg8='',xl8='')    
+                v-container()  
+                  h1.font-weight-medium.pa-3(style="text-align: center;color:#000") {{item.heading}}
+                  h3.font-weight-light.mb-n.pa-3(style="text-align: center;color:#000") {{item.subheading}}          
+          v-layout(v-if='$vuetify.breakpoint.mdAndUp')          
+            v-row
+              v-flex(xs12='',sm12='', md8='',lg8='',xl8='')    
+                v-container()  
+                  h1.font-weight-medium.pa-3(style="text-align: center;color:#000") {{item.heading}}
+                  h3.font-weight-light.mb-n.pa-3(style="text-align: center;color:#000") {{item.subheading}}
+              v-flex(xs12='',sm12='', md4='',lg4='',xl4='')
+                v-img.mt-5.ml-n3.mr-3(:src="item.src" contain aspect-ratio='2.5')    
 
-      v-flex(xs12='',sm12='', md4='',lg4='',xl4='') 
-        h2.mt-1.ml-2 What We Do
-        v-row.mt-5(justify='space-around')
-          v-avatar.elevation-6(color='#fff' size='120')
-            v-icon(size='95') mdi-cloud-braces
-        v-row.mt-5(justify='space-around')
-          h4.ml-3.mr-3 Prominent Technologies
-        v-row.mt-5(justify='space-around')
-          v-avatar.elevation-6(color='#1b65c4' size='120')
-            v-icon( dark= '' size='95') mdi-web
-        v-row.mt-5(justify='space-around')
-          h4 Open-Source Development
-        v-row.mt-5(justify='space-around')
-          v-avatar.elevation-6(color='#fff' size='120')
-            v-icon(size='95') mdi-coffee-outline
-        v-row.mt-5(justify='space-around')
-          h4 Spreading Technical Knowledge          
 </template>
 <script>
 export default {
   name: "Project",
   data: () => ({
-    desc:
-      "psum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 'Lorem ipsum dolor sit amet..'', comes from a line in section 1.10.32",
+    desc1:
+      "DevlUp Labs is a thriving student-led open source community at IIT Jodhpur.We believe in sharing of ideas and upskilling by collaboration through meaningful projects. Our focus is to deliver results with the highest of standards.We aim to build an open source community through proper guidance and by encouraging self learning.",
+    desc2:
+      "We encourage development of technology and Innovation through various sessions, workshops and webinars.",
     item: 1,
     items: [
       {
+        direction: "left",
         heading: "Learning Driven Endeavour",
-        icon: "mdi-compass",
+        src: "../data/images/point1.png",
         subheading:
           "Everything we do is to upskill ourselves! We aim to learn and grow as a team!"
       },
       {
-        heading: "Open Source Army",
-        icon: "mdi-compass",
+        direction: "right",
+        heading: "Open Source community",
+        src: "../data/images/point2.png",
         subheading:
-          "Inspire and guide the coming generation to build a functioning and interactive open-source community"
+          "Inspire and guide the coming generation to build a functioning and interactive open-source community."
       },
       {
+        direction: "left",
         heading: "Projects that matter",
-        icon: "mdi-compass",
+        src: "../data/images/point3.png",
         subheading:
-          "We at devlup labs are committed to products and projects that matter, websites and software that serves a real purpose for the community"
+          "We at devlup labs are committed to products and projects that matter, projects that serve a real purpose for the community."
       },
       {
+        direction: "right",
         heading: "Unparalleled Standards",
-        icon: "mdi-compass",
+        src: "../data/images/point4.png",
         subheading:
           "We insist on the highest of standards, from functionality to code to coffee."
       },
       {
+        direction: "left",
         heading: "Delivering Results",
-        icon: "mdi-compass",
+        src: "../data/images/point5.png",
         subheading:
-          "Nothing is more important than delivering amazing results to the end-user"
+          "Nothing is more important than delivering amazing results to the end-user."
+      },
+      {
+        direction: "right",
+        heading: "Don’t Reinvent the wheel",
+        src: "../data/images/point6.png",
+        subheading:
+          "We believe that we can deliver better results and enrich the learning experience by leveraging existing solutions and building on top of them."
+      },
+      {
+        direction: "left",
+        heading: "Self Learning",
+        src: "../data/images/point7.png",
+        subheading:
+          "Self Learning sits at the heart of devlup labs, we believe in proper utilization of resources and peer guidance to propel self learning."
       }
     ]
   })
