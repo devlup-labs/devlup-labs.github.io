@@ -3,16 +3,17 @@ v-container(fluid='' style='margin: 0px; padding: 0px; width: 100%;')
   v-layout(row='' wrap='')
     v-container(fluid='' style='margin: 0px; padding: 0px; width: 100%;background-color: #1b65c4;')
       v-row
-        v-col(cols="8")
+        v-flex(xs12='',sm12='', md4='',lg4='',xl4='')
+          v-img(src='../assets/aboutus_team.png' aspect-ratio='1.7')
+        v-flex(xs12='',sm12='', md7='',lg7='',xl7='')    
           v-container()  
-            h1.pa-3(style="text-align: center;color:#fff") About Us
-            h3.font-weight-regular.mb-n.pa-5.ml-3.mr-3.mt-n2(style="text-align: left;color:#fff") {{desc1}}
-            h3.font-weight-regular.mb-n.pl-5.pr-5.ml-3.mr-3(style="text-align: left;color:#fff") {{desc2}}
-        v-col(cols="4")
-          v-img.mt-5(src='../assets/favicon.png' aspect-ratio='2')
+            h1.pa-3.mt-3(style="text-align: center;color:#fff") About Us
+            h3.font-weight-regular.mb-n.pl-12.pr-12.mt-n2(style="text-align: left;color:#fff") {{desc1}}
+            h3.font-weight-regular.mb-n.pl-12.pr-12.mt-2(style="text-align: left;color:#fff") {{desc2}}
     v-container()      
-      h1.pa-3.rounded-lg.text-center.grey.lighten-2(style="text-align: center;color:#1b65c4") Guiding Principles
+      h1.pa-3.rounded-lg.text-center(style="text-align: center;color:#000") GUIDING PRINCIPLES
       v-flex(v-for='item in items', :key='item.name',xs12='',sm12='', md12='',lg12='',xl12='')
+        div.d-none.d-lg-flex.d-xl-flex.mt-2
         div(v-if="item.direction === 'left'")
           v-row
             v-flex(xs12='',sm12='', md4='',lg4='',xl4='')
@@ -51,51 +52,51 @@ export default {
     item: 1,
     items: [
       {
-        direction: "left",
+        direction: "right",
         heading: "Learning Driven Endeavour",
-        src: "../data/images/point1.png",
+        src: "../data/images/AboutusPoints/point1new.png",
         subheading:
           "Everything we do is to upskill ourselves! We aim to learn and grow as a team!"
       },
       {
-        direction: "right",
+        direction: "left",
         heading: "Open Source community",
-        src: "../data/images/point2.png",
+        src: "../data/images/AboutusPoints/point2new.png",
         subheading:
           "Inspire and guide the coming generation to build a functioning and interactive open-source community."
       },
       {
-        direction: "left",
+        direction: "right",
         heading: "Projects that matter",
-        src: "../data/images/point3.png",
+        src: "../data/images/AboutusPoints/point3new.png",
         subheading:
           "We at devlup labs are committed to products and projects that matter, projects that serve a real purpose for the community."
       },
       {
-        direction: "right",
+        direction: "left",
         heading: "Unparalleled Standards",
-        src: "../data/images/point4.png",
+        src: "../data/images/AboutusPoints/point4new.png",
         subheading:
           "We insist on the highest of standards, from functionality to code to coffee."
       },
       {
-        direction: "left",
+        direction: "right",
         heading: "Delivering Results",
-        src: "../data/images/point5.png",
+        src: "../data/images/AboutusPoints/point5new.png",
         subheading:
           "Nothing is more important than delivering amazing results to the end-user."
       },
       {
-        direction: "right",
+        direction: "left",
         heading: "Don’t Reinvent the wheel",
-        src: "../data/images/point6.png",
+        src: "../data/images/AboutusPoints/point6new.png",
         subheading:
           "We believe that we can deliver better results and enrich the learning experience by leveraging existing solutions and building on top of them."
       },
       {
-        direction: "left",
+        direction: "right",
         heading: "Self Learning",
-        src: "../data/images/point7.png",
+        src: "../data/images/AboutusPoints/point7new.png",
         subheading:
           "Self Learning sits at the heart of devlup labs, we believe in proper utilization of resources and peer guidance to propel self learning."
       }
