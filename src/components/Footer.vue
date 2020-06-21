@@ -5,7 +5,6 @@
           v-icon {{link}}
       v-col.py-4.text-center.white--text.font-weight-bold(color="secondary" cols="12") {{ new Date().getFullYear() }} — Devlup Labs
 </template>
-
 <script>
 export default {
   data() {
