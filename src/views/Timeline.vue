@@ -1,7 +1,7 @@
 <template lang="pug">
   v-row.justify-center
     v-col(cols='12', md='8')
-      v-timeline(:dense='$vuetify.breakpoint.smAndDown')
+      v-timeline(v-if="timelineDetails.length != 0" :dense='$vuetify.breakpoint.smAndDown')
         TimelineCard(:timelineDetails='timelineDetails')
 </template>
 
@@ -15,10 +15,22 @@ export default {
     drawer: null,
     timelineDetails: []
   }),
-  created() {
-    fetch("/data/timelines.json").then(resp =>
-      resp.json().then(list => (this.timelineDetails = list))
-    );
+  methods: {
+    fetchTimelines() {
+      fetch(
+        "https://spreadsheets.google.com/feeds/list/1gEG08lGpzhtVYzmjyOuYF5qlTFAWhvR2FeAuQlIlIuY/oemu3cb/public/values?alt=json"
+      ).then(e =>
+        e
+          .json()
+          .then(e => {
+            this.timelineDetails = [...e.feed.entry];
+          })
+          .then(e => console.log(e, this.timelineDetails))
+      );
+    }
+  },
+  mounted() {
+    this.fetchTimelines();
   }
 };
 </script>

@@ -4,7 +4,7 @@
         "info": "This is a web portal for automating the placement procedure. The above mentioned technology stack was used.",
         "githubLink": "#",
         "webLink": "#",
-        "tags": [{ "name": "vue" }, { "name": "html" }, { "name": "javascript" }],
+        "tags": [{ "name": "vue" }, { "name": "vue" }, { "name": "vue" }, { "name": "html" }, { "name": "javascript" }],
         "images": [
             { "src": "../data/images/cdclogodata.jpg" },
             { "src": "../data/images/Profiledata.png" }
