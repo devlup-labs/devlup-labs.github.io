@@ -14,10 +14,22 @@ export default {
   data: () => ({
     profiles: []
   }),
-  created() {
-    fetch("/data/profiles.json").then(resp =>
-      resp.json().then(list => (this.profiles = list))
-    );
+  methods: {
+    fetchProfiles() {
+      fetch(
+        "https://spreadsheets.google.com/feeds/list/1gEG08lGpzhtVYzmjyOuYF5qlTFAWhvR2FeAuQlIlIuY/oh0n2ko/public/values?alt=json"
+      ).then(e =>
+        e
+          .json()
+          .then(e => {
+            this.profiles = [...e.feed.entry];
+          })
+          .then(e => console.log(e, this.profiles))
+      );
+    }
+  },
+  mounted() {
+    this.fetchProfiles();
   }
 };
 </script>

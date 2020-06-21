@@ -2,25 +2,27 @@
 v-row(align='center', justify='left')
   v-flex
     v-card.pa-2.elevation-6(:width='0.9*getProjectHeight', hover='hover')
-      h2(underline='underline') {{ Project.name }}
+      h2(underline='underline') {{ Project.gsx$name.$t }}
       v-carousel(hide-delimiters='hide-delimiters', :height='0.5*getProjectHeight', show-arrows-on-hover='show-arrows-on-hover')
         v-carousel-item(v-for='image in Project.images', contain='contain', :key='image.src', :src='image.src')
       v-card(flat='flat')
-        h5.pa-1.d-inline-blocktext-truncate(style='height:50px') {{ Project.description }}
+        h5.pa-1.d-inline-blocktext-truncate(style='height:50px') {{ Project.gsx$description.$t }}
         v-divider
         v-flex.pa-1
-          v-chip.pa-2.ma-1(v-for='tag in Project.tags', :key='tag.name', label='label', small='small') {{ tag.name }} 
+          v-chip.pa-2.ma-1(v-if='Project.gsx$tag1.$t',label='label', small='small') {{ Project.gsx$tag1.$t }} 
+          v-chip.pa-2.ma-1(v-if='Project.gsx$tag2.$t',label='label', small='small') {{ Project.gsx$tag2.$t }} 
+          v-chip.pa-2.ma-1(v-if='Project.gsx$tag3.$t',label='label', small='small') {{ Project.gsx$tag3.$t }} 
           v-btn(icon='icon', @click='show = !show')
             v-icon {{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}
         v-expand-transition
           div(v-show='show')
-            h6.pa-1 {{ Project.info }}
+            h6.pa-1 {{ Project.gsx$info.$t }}
         v-row.justify-space-around
-          v-col(cols='5', v-if='Project.githubLink')
-            v-btn.ml-1.mr-1(:href='Project.githubLink', dark='dark', block='block')
+          v-col(cols='5', v-if='Project.gsx$githublink.$t')
+            v-btn.ml-1.mr-1(:href='Project.gsx$githublink.$t', dark='dark', block='block')
               v-icon mdi-github 
-          v-col(cols='5', v-if='Project.webLink')
-            v-btn.ml-1.mr-1(:href='Project.webLink', block='block')
+          v-col(cols='5', v-if='Project.gsx$weblink.$t')
+            v-btn.ml-1.mr-1(:href='Project.gsx$weblink.$t', block='block')
               v-icon mdi-web 
      
 </template>

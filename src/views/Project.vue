@@ -18,6 +18,23 @@ export default {
     fetch("/data/projects.json").then(resp =>
       resp.json().then(list => (this.projects = list))
     );
+  },
+  methods: {
+    fetchProjects() {
+      fetch(
+        "https://spreadsheets.google.com/feeds/list/1gEG08lGpzhtVYzmjyOuYF5qlTFAWhvR2FeAuQlIlIuY/o4eja9x/public/values?alt=json"
+      ).then(e =>
+        e
+          .json()
+          .then(e => {
+            this.profiles = [...e.feed.entry];
+          })
+          .then(e => console.log(e, this.projects))
+      );
+    }
+  },
+  mounted() {
+    this.fetchProjects();
   }
 };
 </script>
