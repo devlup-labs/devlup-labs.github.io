@@ -14,11 +14,6 @@ export default {
   data: () => ({
     projects: []
   }),
-  created() {
-    fetch("/data/projects.json").then(resp =>
-      resp.json().then(list => (this.projects = list))
-    );
-  },
   methods: {
     fetchProjects() {
       fetch(
@@ -27,7 +22,7 @@ export default {
         e
           .json()
           .then(e => {
-            this.profiles = [...e.feed.entry];
+            this.projects = [...e.feed.entry];
           })
           .then(e => console.log(e, this.projects))
       );
