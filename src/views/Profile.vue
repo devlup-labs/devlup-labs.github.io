@@ -19,12 +19,9 @@ export default {
       fetch(
         "https://spreadsheets.google.com/feeds/list/1gEG08lGpzhtVYzmjyOuYF5qlTFAWhvR2FeAuQlIlIuY/oh0n2ko/public/values?alt=json"
       ).then(e =>
-        e
-          .json()
-          .then(e => {
-            this.profiles = [...e.feed.entry];
-          })
-          .then(e => console.log(e, this.profiles))
+        e.json().then(e => {
+          this.profiles = [...e.feed.entry];
+        })
       );
     }
   },

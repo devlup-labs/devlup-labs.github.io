@@ -46,9 +46,6 @@ export default {
         this.ProfileWidth || this.$vuetify.theme.options.cards.ProfileWidth
       );
     }
-  },
-  mounted() {
-    console.log(this.Profile);
   }
 };
 </script>
