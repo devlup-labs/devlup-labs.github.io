@@ -20,12 +20,9 @@ export default {
       fetch(
         "https://spreadsheets.google.com/feeds/list/1gEG08lGpzhtVYzmjyOuYF5qlTFAWhvR2FeAuQlIlIuY/oemu3cb/public/values?alt=json"
       ).then(e =>
-        e
-          .json()
-          .then(e => {
-            this.timelineDetails = [...e.feed.entry];
-          })
-          .then(e => console.log(e, this.timelineDetails))
+        e.json().then(e => {
+          this.timelineDetails = [...e.feed.entry];
+        })
       );
     }
   },

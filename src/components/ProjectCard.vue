@@ -45,9 +45,6 @@ export default {
         this.ProjectHeight || this.$vuetify.theme.options.cards.ProjectHeight
       );
     }
-  },
-  mounted() {
-    console.log(this.Profile);
   }
 };
 </script>
