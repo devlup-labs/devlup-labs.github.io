@@ -1,4 +1,5 @@
 <template lang="pug">
+  v-card.elevation-24
     v-footer(color="basic" padless)
       v-row(justify="center" no-gutters)
         v-btn.py-2(v-for="link in links" :key="link" :href="link.href" color="white" icon)

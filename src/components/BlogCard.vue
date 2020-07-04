@@ -1,6 +1,6 @@
 <template lang="pug">
 v-layout(row='' wrap='')
-  v-card.mx-auto.elevation-4(max-width='344',height='100%',:href="blog.link")
+  v-card.mx-auto.elevation-4(max-width='344',height='100%',:href="blog.link",target='_blank')
     v-img(:src="blog.thumbnail" height='150')
     v-list-item
       v-list-item-content
