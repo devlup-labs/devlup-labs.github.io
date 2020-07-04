@@ -21,10 +21,10 @@ v-row(align='center', justify='left')
             h6.pa-1 {{ Project.gsx$info.$t }}
         v-row.justify-space-around
           v-col(cols='5', v-if='Project.gsx$githublink.$t')
-            v-btn.ml-1.mr-1(:href='Project.gsx$githublink.$t', dark='dark', block='block')
+            v-btn.ml-1.mr-1(:href='Project.gsx$githublink.$t',target='_blank', dark='dark', block='block')
               v-icon mdi-github 
           v-col(cols='5', v-if='Project.gsx$weblink.$t')
-            v-btn.ml-1.mr-1(:href='Project.gsx$weblink.$t', block='block')
+            v-btn.ml-1.mr-1(:href='Project.gsx$weblink.$t',target='_blank', block='block')
               v-icon mdi-web 
      
 </template>

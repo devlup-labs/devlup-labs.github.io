@@ -17,13 +17,13 @@ v-row(justify='left')
                       v-col
                         h6 {{ Profile.gsx$currentdesignation.$t }} | {{Profile.gsx$devlupdesignation.$t }}
                   v-row(align="center" justify="center") 
-                    v-btn(color='red',:href="Profile.gsx$linkemail.$t",v-if='Profile.gsx$linkemail.$t' icon small)
+                    v-btn(color='red',:href="Profile.gsx$linkemail.$t",target='_blank',v-if='Profile.gsx$linkemail.$t' icon small)
                       v-icon(color='red') mdi-email
-                    v-btn(color='black',:href="Profile.gsx$linkgithub.$t",v-if='Profile.gsx$linkgithub.$t' icon small)
+                    v-btn(color='black',:href="Profile.gsx$linkgithub.$t",target='_blank',v-if='Profile.gsx$linkgithub.$t' icon small)
                       v-icon(color='black') mdi-github
-                    v-btn(color='orange',:href="Profile.gsx$linkgitlab.$t",v-if='Profile.gsx$linkgitlab.$t' icon small)
+                    v-btn(color='orange',:href="Profile.gsx$linkgitlab.$t",target='_blank',v-if='Profile.gsx$linkgitlab.$t' icon small)
                       v-icon(color='orange') mdi-gitlab
-                    v-btn(color='blue',:href="Profile.gsx$linklinkedin.$t",v-if='Profile.gsx$linklinkedin.$t' icon small)
+                    v-btn(color='blue',:href="Profile.gsx$linklinkedin.$t",target='_blank',v-if='Profile.gsx$linklinkedin.$t' icon small)
                       v-icon(color='blue') mdi-linkedin
                 v-icon(@click="pageNo = 2" color="#1b65c4") mdi-chevron-right
           v-stepper-content.pb-3.pt-1.pl-1.mt-n2(step="2")
