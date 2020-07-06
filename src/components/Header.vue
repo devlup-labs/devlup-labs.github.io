@@ -1,6 +1,7 @@
 <template lang="pug">
     v-card.elevation-24
         v-app-bar(app clipped-right flat floating style="opacity:1.0")
+          
             v-app-bar-nav-icon.hidden-md-and-up(@click.stop="drawer = !drawer")
             v-avatar(size="48px")
                 v-img(src="../assets/logo.jpeg")
@@ -8,7 +9,7 @@
                 span.title.ml-3.mr-5(text style="color:black") Devlup Labs&nbsp;
             v-spacer
             div.hidden-sm-and-down
-              v-btn.pa-2.ma-1(text v-for="link in links" :key="link.text" :to="{name:link.text}" label exact) {{link.text}}
+              v-btn.pa-2.ma-1(text v-for="link in links" :key="link.text" :to="{name:link.text}" label exact) {{link.text}} 
         v-navigation-drawer(v-model="drawer" app left temporary style="z-index:5")
           v-list(dense)
             v-list-item( v-for="link in links" :key="link.text" @click="" :to="{name:link.text}" exact)
@@ -21,6 +22,7 @@
 <script>
 export default {
   name: "Header",
+
   data() {
     return {
       drawer: null,
