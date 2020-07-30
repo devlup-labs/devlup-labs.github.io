@@ -17,7 +17,11 @@ export default {
           icon: "mdi-instagram",
           href: "https://www.instagram.com/devluplabs/"
         },
-        { icon: "mdi-github", href: "https://github.com/devlup-labs" }
+        { icon: "mdi-github", href: "https://github.com/devlup-labs" },
+        {
+          icon: "mdi-linkedin",
+          href: "https://www.linkedin.com/company/devlup-labs/"
+        }
       ]
     };
   }
