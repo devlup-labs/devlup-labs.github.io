@@ -158,7 +158,7 @@ export default {
     numberRules: [
       v => !!v || "Mobile number is required",
       v =>
-        (/^[0-9]{10}/.test(v) && v.length <= 12) ||
+        (/^[0-9]{10}/.test(v) && v.length <= 13) ||
         "Mobile number must be valid"
     ],
     required(propertyType) {
