@@ -73,7 +73,7 @@ v-container(fluid='' style='margin: 0px; padding: 0px; width: 100%;')
                 div.form-row
                     v-text-field(
                                   lable="phone" color='#1b65c4' id="phone" name="entry.1452831997" 
-                                  type="phone" placeholder="Phone"
+                                  type="phone" placeholder="Contact Number"
                                   counter=true
                                   v-model="mobileNo"
                                   :rules="numberRules")
@@ -147,20 +147,6 @@ export default {
           "Self Learning sits at the heart of devlup labs, we believe in proper utilization of resources and peer guidance to propel self learning."
       }
     ],
-    valid: false,
-    links: [
-      { icon: "mdi-gmail", href: "mailto:opensourceiitj@gmail.com" },
-      { icon: "mdi-facebook", href: "https://www.facebook.com/devluplabs/" },
-      {
-        icon: "mdi-instagram",
-        href: "https://www.instagram.com/devluplabs/"
-      },
-      { icon: "mdi-github", href: "https://github.com/devlup-labs" },
-      {
-        icon: "mdi-linkedin",
-        href: "https://www.linkedin.com/company/devlup-labs/"
-      }
-    ],
     validForm: false,
     submitted: false,
     emailAddress: "",
@@ -171,7 +157,9 @@ export default {
     mobileNo: "",
     numberRules: [
       v => !!v || "Mobile number is required",
-      v => /^[0-9]{10}/.test(v) || "Mobile number must be valid"
+      v =>
+        (/^[0-9]{10}/.test(v) && v.length <= 12) ||
+        "Mobile number must be valid"
     ],
     required(propertyType) {
       return v => (v && v.length > 0) || `You must input a ${propertyType}`;
