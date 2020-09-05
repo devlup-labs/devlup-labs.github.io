@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import AboutUs from "../views/AboutUs.vue";
 import Profile from "../views/Profile";
+// import ContactUs from "../views/ContactUs.vue";
 import Project from "../views/Project";
 import Timeline from "../views/Timeline";
 import Blog from "../views/Blog";
@@ -52,6 +53,12 @@ const routes = [
     component: Profile,
     meta: { title: "Team" }
   }
+  // {
+  //   path: "/contact",
+  //   name: "Contact Us",
+  //   component: ContactUs,
+  //   meta: { title: "Contact Us" }
+  // },
 ];
 
 const router = new VueRouter({

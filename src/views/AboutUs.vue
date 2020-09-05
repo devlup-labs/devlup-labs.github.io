@@ -38,8 +38,54 @@ v-container(fluid='' style='margin: 0px; padding: 0px; width: 100%;')
                   h1.font-weight-medium.pa-3(style="text-align: center;color:#000") {{item.heading}}
                   h3.font-weight-light.mb-n.pa-3(style="text-align: center;color:#000") {{item.subheading}}
               v-flex(xs12='',sm12='', md4='',lg4='',xl4='')
-                v-img.mt-5.ml-n3.mr-3(:src="item.src" contain aspect-ratio='2.5')    
+                v-img.mt-5.ml-n3.mr-3(:src="item.src" contain aspect-ratio='2.5')   
 
+
+  div(align='center', class="form-container" justify='center')
+    v-section.Form
+      div.container.col-sm-10(class="my-5")
+        v-row(class="no-gutters pb-5" id="formRow")
+          div.col-lg-5.col-md-5(class="pt-11 pl-7 pb-0" align="center" justify="center")
+            v-img.img-fluid(src="../assets/contactUs.png" id="contactImg" align="center" justify="center")
+          div.col-lg-7.col-md-7( justify='center' class='px-5')
+            div.col-lg-9(align="center" justify="left")
+              iframe(name="hiddenFrame" width="0" height="0" border="0" style="display: none;"
+                    onload="if(submitted){location.reload()}")
+              v-form(class="login my-3" id="user_info_submit" name="form"
+                    action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSd25Z-mQHDN42vNZdMXwQXkH_LfTnpUMA2kxJPnj4VHy6q8JQ/formResponse"
+                    method="POST" target="hiddenFrame"
+                    v-model="validForm"
+                    onsubmit="submitted=true;"
+                    )
+                h1(style="color: #1b65c4; font-size: 2.5rem" class="font-weight-bold py-3") Contact Us
+                div.form-row
+                    v-text-field(
+                                  lable="Email: " id="email" name="entry.1624474703" color='#1b65c4' 
+                                  type="email"  placeholder="Email" 
+                                  v-model="emailAddress"
+                                  :rules="emailRules")
+                div.form-row
+                    v-text-field(
+                                  lable="full name: " id="name" name="entry.274700485" color='#1b65c4' 
+                                  type="text" placeholder="Full Name" 
+                                  counter=50
+                                  :rules="[required('Name'), minLength('Name', 4), maxLength('Name', 50)]")
+                div.form-row
+                    v-text-field(
+                                  lable="phone" color='#1b65c4' id="phone" name="entry.1452831997" 
+                                  type="phone" placeholder="Phone"
+                                  counter=true
+                                  v-model="mobileNo"
+                                  :rules="numberRules")
+                div.form-row
+                    v-text-field(lable="comments" color='#1b65c4' 
+                                name="entry.629220262" type="textarea" 
+                                placeholder="Put You suggestions here"
+                                id="suggestion"
+                                counter=true
+                                )
+                div.form-row
+                  v-btn(color='#1b65c4' class='my-3' type="submit" :disabled="!validForm").white--text Submit
 </template>
 <script>
 export default {
@@ -100,7 +146,59 @@ export default {
         subheading:
           "Self Learning sits at the heart of devlup labs, we believe in proper utilization of resources and peer guidance to propel self learning."
       }
-    ]
+    ],
+    valid: false,
+    links: [
+      { icon: "mdi-gmail", href: "mailto:opensourceiitj@gmail.com" },
+      { icon: "mdi-facebook", href: "https://www.facebook.com/devluplabs/" },
+      {
+        icon: "mdi-instagram",
+        href: "https://www.instagram.com/devluplabs/"
+      },
+      { icon: "mdi-github", href: "https://github.com/devlup-labs" },
+      {
+        icon: "mdi-linkedin",
+        href: "https://www.linkedin.com/company/devlup-labs/"
+      }
+    ],
+    validForm: false,
+    submitted: false,
+    emailAddress: "",
+    emailRules: [
+      v => !!v || "E-mail is required",
+      v => /.+@.+\..+/.test(v) || "E-mail must be valid"
+    ],
+    mobileNo: "",
+    numberRules: [
+      v => !!v || "Mobile number is required",
+      v => /^[0-9]{10}/.test(v) || "Mobile number must be valid"
+    ],
+    required(propertyType) {
+      return v => (v && v.length > 0) || `You must input a ${propertyType}`;
+    },
+    minLength(propertyType, minLength) {
+      return v =>
+        (v && v.length >= minLength) ||
+        `${propertyType} must be atleast ${minLength} characters!`;
+    },
+    maxLength(propertyType, maxLength) {
+      return v =>
+        (v && v.length <= maxLength) ||
+        `${propertyType} must be less than ${maxLength} characters!`;
+    }
   })
 };
 </script>
+
+<style scoped>
+#formRow {
+  background-color: white;
+  border-radius: 15px;
+}
+#contactImg {
+  max-height: 300px;
+  max-width: 400px;
+  margin-top: 40px;
+  border-radius: 20px;
+}
+</style>
