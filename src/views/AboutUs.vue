@@ -162,7 +162,7 @@ export default {
         "Mobile number must be valid"
     ],
     required(propertyType) {
-      return v => (v && v.length > 0) || `You must input a ${propertyType}`;
+      return v => !!v || `You must input a ${propertyType}`;
     },
     minLength(propertyType, minLength) {
       return v =>
