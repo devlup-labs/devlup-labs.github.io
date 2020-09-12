@@ -42,7 +42,7 @@ v-container(fluid='' style='margin: 0px; padding: 0px; width: 100%;')
 
 
   div(align='center', class="form-container" justify='center')
-    v-section.Form(name="formSection")
+    div.Form(name="formSection" id="formComponent")
       div.container.col-sm-10(class="my-5" name="")
         v-row(class="no-gutters pb-5" id="formRow")
           div.col-lg-5.col-md-5(class="pt-11 pl-7 pb-0" align="center" justify="center")
@@ -55,6 +55,7 @@ v-container(fluid='' style='margin: 0px; padding: 0px; width: 100%;')
                     action="https://docs.google.com/forms/d/e/1FAIpQLSeyQ2dD8L6DkyYjL_3JzWyZUD1IhOelzgEO8O4kVcdySFVehA/formResponse"
                     method="POST" target="hiddenFrame"
                     v-model="validForm"
+                    v-ref="form"
                     onsubmit="submitted=true;"
                     )
                 h1(style="color: #1b65c4; font-size: 2.5rem" class="font-weight-bold py-3") Contact Us
