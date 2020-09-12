@@ -2,14 +2,14 @@
   v-card.elevation-24
     v-footer(color="basic" padless)
       v-row(justify="center" no-gutters)
-        v-btn.py-2(v-for="link in links" :key="link" :href="link.href" color="white" icon)
+        v-btn(v-for="link in links" :key="link" :href="link.href" color="white" icon)
           v-icon {{link.icon}}
-      v-col.pt-2.mb-0.text-center.font-weight-bold(color="secondary" cols="12") 
+      v-col.my-n5.text-center.font-weight-bold(color="secondary" cols="12") 
         v-btn.text-center.white--text.font-weight-bold(text='Primary', 
                                                        to='./about', color='white' large
                                                        @click="viewForm"
                                                        ) Contact Us
-      v-col.pt-0.pb-4.text-center.white--text.font-weight-bold(color="secondary" cols="12") {{ new Date().getFullYear() }} — Devlup Labs
+      v-col.pt-0.pb-1.text-center.white--text.font-weight-bold(color="secondary" cols="12") {{ new Date().getFullYear() }} — Devlup Labs
 </template>
 <script>
 import form from "../views/AboutUs.vue";

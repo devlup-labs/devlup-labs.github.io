@@ -81,7 +81,7 @@ v-container(fluid='' style='margin: 0px; padding: 0px; width: 100%;')
                 div.form-row(name="inputSuggestion")
                     v-text-field(lable="comments" color='#1b65c4' 
                                 name="entry.1558155518" type="textarea" 
-                                placeholder="Put You suggestions here"
+                                placeholder="What can we do for you?"
                                 id="suggestion"
                                 counter=true
                                 )
