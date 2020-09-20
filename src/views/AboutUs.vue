@@ -45,9 +45,11 @@ v-container(fluid='' style='margin: 0px; padding: 0px; width: 100%;')
     div.Form(name="formSection" id="formComponent")
       div.container.col-sm-10(class="my-5" name="")
         v-row(class="no-gutters pb-5" id="formRow")
-          div.col-lg-5.col-md-5(class="pt-11 pl-7 pb-0" align="center" justify="center")
-            v-img.img-fluid(src="../assets/contactUs.png" id="contactImg" align="center" justify="center")
-          div.col-lg-7.col-md-7( justify='center' class='px-5')
+          div.col-md-5(class="pt-11 pl-7 pb-0" align="center" justify="center")
+            v-img.img-fluid.mt-10(src="../assets/contactUs.png" 
+                                  max-height='300' max-width='400'
+                                  align="center" justify="center")
+          div.col-md-7( justify='center' class='px-5')
             div.col-lg-9(align="center" justify="left")
               iframe(name="hiddenFrame" width="0" height="0" border="0" style="display: none;"
                     onload="if(submitted){location.reload()}")
@@ -55,38 +57,32 @@ v-container(fluid='' style='margin: 0px; padding: 0px; width: 100%;')
                     action="https://docs.google.com/forms/d/e/1FAIpQLSeyQ2dD8L6DkyYjL_3JzWyZUD1IhOelzgEO8O4kVcdySFVehA/formResponse"
                     method="POST" target="hiddenFrame"
                     v-model="validForm"
-                    v-ref="form"
                     onsubmit="submitted=true;"
                     )
                 h1(style="color: #1b65c4; font-size: 2.5rem" class="font-weight-bold py-3") Contact Us
-                div.form-row(name="inputEmail")
-                    v-text-field(
-                                  lable="Email: " id="email" name="entry.785378515" color='#1b65c4' 
-                                  type="email"  placeholder="Email" 
-                                  v-model="emailAddress"
-                                  :rules="emailRules")
-                div.form-row(name="inputName")
-                    v-text-field(
-                                  lable="full name: " id="name" name="entry.2032351164" color='#1b65c4' 
-                                  type="text" placeholder="Full Name" 
-                                  counter=50
-                                  :rules="[required('Name'), minLength('Name', 4), maxLength('Name', 50)]")
-                div.form-row(name="inputPhone")
-                    v-text-field(
-                                  lable="phone" color='#1b65c4' id="phone" name="entry.1442733485" 
-                                  type="phone" placeholder="Contact Number"
-                                  counter=true
-                                  v-model="mobileNo"
-                                  :rules="numberRules")
-                div.form-row(name="inputSuggestion")
-                    v-text-field(lable="comments" color='#1b65c4' 
-                                name="entry.1558155518" type="textarea" 
-                                placeholder="What can we do for you?"
-                                id="suggestion"
-                                counter=true
-                                )
-                div.form-row(name="inputButton")
-                  v-btn(color='#1b65c4' class='my-3' type="submit" :disabled="!validForm").white--text Submit
+                v-text-field(lable="Email: " id="email" name="entry.785378515" color='#1b65c4' 
+                              type="email"  placeholder="Email" 
+                              v-model="emailAddress"
+                              :rules="emailRules")
+
+                v-text-field(lable="full name: " id="name" name="entry.2032351164" color='#1b65c4' 
+                              type="text" placeholder="Full Name" 
+                              counter=50
+                              :rules="[required('Name'), minLength('Name', 4), maxLength('Name', 50)]")
+
+                v-text-field(lable="phone" color='#1b65c4' id="phone" name="entry.1442733485" 
+                              type="phone" placeholder="Contact Number"
+                              counter=true
+                              v-model="mobileNo"
+                              :rules="numberRules")
+
+                v-text-field(lable="comments" color='#1b65c4' 
+                            name="entry.1558155518" type="textarea" 
+                            placeholder="What can we do for you?"
+                            id="suggestion"
+                            counter=true)
+                            
+              v-btn(color='#1b65c4' class='my-3' type="submit" :disabled="!validForm").white--text Submit
 </template>
 <script>
 export default {
@@ -178,16 +174,3 @@ export default {
   })
 };
 </script>
-
-<style scoped>
-#formRow {
-  background-color: white;
-  border-radius: 15px;
-}
-#contactImg {
-  max-height: 300px;
-  max-width: 400px;
-  margin-top: 40px;
-  border-radius: 20px;
-}
-</style>
