@@ -46,8 +46,8 @@ v-container(fluid='' style='margin: 0px; padding: 0px; width: 100%;')
       div.container.col-sm-10(class="my-5" name="")
         v-row(class="no-gutters pb-5" id="formRow")
           div.col-md-5(class="pt-11 pl-7 pb-0" align="center" justify="center")
-            v-img.img-fluid.mt-10(src="../assets/contactUs.png" 
-                                  max-height='300' max-width='400'
+            v-img.img-fluid.mt-40(src="../assets/contactUs.png" 
+                                  max-height='300' max-width='400' 
                                   align="center" justify="center")
           div.col-md-7( justify='center' class='px-5')
             div.col-lg-9(align="center" justify="left")
@@ -82,7 +82,7 @@ v-container(fluid='' style='margin: 0px; padding: 0px; width: 100%;')
                             id="suggestion"
                             counter=true)
                             
-              v-btn(color='#1b65c4' class='my-3' type="submit" :disabled="!validForm").white--text Submit
+                v-btn(color='#1b65c4' class='my-3' type="submit" :disabled="!validForm").white--text Submit
 </template>
 <script>
 export default {
