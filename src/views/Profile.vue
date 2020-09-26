@@ -10,8 +10,8 @@ div(align='center', justify='center')
 </template>
 
 <script>
-import ProfileCard from "../components/ProfileCard";
-import Preloader from "../components/Preloader";
+const ProfileCard = () => import("../components/ProfileCard");
+const Preloader = () => import("../components/Preloader");
 export default {
   name: "Profile",
   components: { ProfileCard, Preloader },
