@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import PageHeader from "@/components/Header.vue";
-import PageFooter from "@/components/Footer.vue";
+const PageHeader = () => import("@/components/Header.vue");
+const PageFooter = () => import("@/components/Footer.vue");
 
 export default {
   name: "App",

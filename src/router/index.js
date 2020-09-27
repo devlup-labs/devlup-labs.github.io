@@ -1,55 +1,49 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-import AboutUs from "../views/AboutUs.vue";
-import Profile from "../views/Profile";
-import Project from "../views/Project";
-import Timeline from "../views/Timeline";
-import Blog from "../views/Blog";
-import Videos from "../views/Videos";
+
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home,
+    component: () => import("../views/Home.vue"),
     meta: { title: "DevlUp Labs" }
   },
   {
     path: "/about",
     name: "About",
-    component: AboutUs,
+    component: () => import("../views/AboutUs.vue"),
     meta: { title: "About Us" }
   },
   {
     path: "/projects",
     name: "Projects",
-    component: Project,
+    component: () => import("../views/Project"),
     meta: { title: "Projects" }
   },
   {
     path: "/timeline",
     name: "Timeline",
-    component: Timeline,
+    component: () => import("../views/Timeline"),
     meta: { title: "Timeline" }
   },
   {
     path: "/blog",
     name: "Blog",
-    component: Blog,
+    component: () => import("../views/Blog"),
     meta: { title: " Our Blog" }
   },
   {
     path: "/videos",
     name: "Videos",
-    component: Videos,
+    component: () => import("../views/Videos"),
     meta: { title: " Videos" }
   },
   {
     path: "/team",
     name: "Team",
-    component: Profile,
+    component: () => import("../views/Profile"),
     meta: { title: "Team" }
   }
 ];

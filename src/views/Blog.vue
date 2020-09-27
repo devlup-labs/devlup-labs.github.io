@@ -11,8 +11,8 @@ div(align='center', justify='center')
 </template>
 
 <script>
-import BlogCard from "../components/BlogCard";
-import Preloader from "../components/Preloader";
+const BlogCard = () => import("../components/BlogCard");
+const Preloader = () => import("../components/Preloader");
 export default {
   name: "Blog",
   components: { BlogCard, Preloader },

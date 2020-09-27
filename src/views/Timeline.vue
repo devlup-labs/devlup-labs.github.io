@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import TimelineCard from "../components/TimelineCard";
-import Preloader from "../components/Preloader";
+const TimelineCard = () => import("../components/TimelineCard");
+const Preloader = () => import("../components/Preloader");
 export default {
   name: "Timeline",
   components: { TimelineCard, Preloader },

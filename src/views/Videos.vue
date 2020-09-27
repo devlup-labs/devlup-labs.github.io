@@ -10,8 +10,8 @@ div(align='center', justify='center')
       v-btn(color='#1b65c4' dark='' large href="https://www.youtube.com/channel/UCFaRxxB8-BB5GXH-wlwGqIw") Our Channel
 </template>
 <script>
-import VideoCard from "../components/VideoCard";
-import Preloader from "../components/Preloader";
+const VideoCard = () => import("../components/VideoCard");
+const Preloader = () => import("../components/Preloader");
 export default {
   name: "Videos",
   components: { VideoCard, Preloader },

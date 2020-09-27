@@ -9,8 +9,8 @@ div(align='center', justify='center')
           ProjectCard(:Project='Project')
 </template>
 <script>
-import ProjectCard from "../components/ProjectCard";
-import Preloader from "../components/Preloader";
+const ProjectCard = () => import("../components/ProjectCard");
+const Preloader = () => import("../components/Preloader");
 export default {
   name: "Project",
   components: { ProjectCard, Preloader },
