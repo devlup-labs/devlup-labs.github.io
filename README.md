@@ -22,6 +22,24 @@ Portfolio of the Open-Source Community at IIT Jodhpur.
 
 * npm run lint
 
+## Workflow
+
+#### 1. Projects,Profiles and Timeline Tabs
+* Using Google Sheets functionality we have set-up a connection from every sheet to it's respective tabs.
+* Each tab has it's own set of fields in which data has been fed via Google Sheets and gets updated automatically and instantly on changing any value.
+* For image storage a link to a Google Drive image is advised,in case of the original image url changing.
+
+
+#### 2. Blog and Videos Tabs
+* The content for the Blog tab was sourced from our own [Medium Page](https://medium.com/devlup-labs).
+* The content for the Videos tab was sourced from our own [Youtube Channel](https://www.youtube.com/channel/UCFaRxxB8-BB5GXH-wlwGqIw).
+* [RSS-JSON Converter](https://api.rss2json.com) was used to convert the incoming feeds from medium and youtube to JSON from which required data could be used.
+
+
+#### 3. Contact Us Form
+* The action of the form is connected to a Google form, which has a spreadsheet along with it. 
+* On clicking Submit button, a function is run which a mail is sent to DevlUps Labs , updating the spreadsheet attached in Google form with user's data to get back quickly to the user!
+
 ## Built With
 
 * HTML/CSS 
