@@ -7,6 +7,7 @@ div(align='center' ,justify='center')
             v-row.mt-9
                 v-flex.mb-6(v-for='podcast in podcasts', :key='podcast.name' ,xs12='',sm12='',md6='',lg6='',xl4='')
                     Podcastcard(:podcast='podcast')
+            v-btn(color='#1b65c4' dark='' large href="https://open.spotify.com/show/4SR5Z0HoAs8G2TFmabPsBd?si=KGAFIe7CQe-bnvpaHx-1oQ") Our spotify channel
     </template>
 <script>
 const Podcastcard = () => import("../components/Podcastcard");
