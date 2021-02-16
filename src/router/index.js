@@ -41,6 +41,12 @@ const routes = [
     meta: { title: " Videos" }
   },
   {
+    path: "/podcast",
+    name: "Podcasts",
+    component: () => import("../views/Podcast"),
+    meta: { title: "Podcasts" }
+  },
+  {
     path: "/team",
     name: "Team",
     component: () => import("../views/Profile"),
