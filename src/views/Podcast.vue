@@ -22,7 +22,7 @@ export default {
     fetchPodcast() {
       this.loading = true;
       fetch(
-        "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3DUCFaRxxB8-BB5GXH-wlwGqIw"
+        "https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Ffetchrss.com%2Frss%2F602bc7b72a694610833ee232602bc791fa10ad4d200418d2.atom"
       )
         .then(e => e.json().then(e => (this.podcasts = e.items)))
         .finally(() => (this.loading = false));
