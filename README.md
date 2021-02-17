@@ -8,7 +8,9 @@ Portfolio of the Open-Source Community at IIT Jodhpur.
 
 2. Clone this repository and setup a remote to the original repository.
 
-3. Open up your IDE and in your terminal run the following commands:
+3.Make sure node.js is installed else install it.
+
+4. Open up your IDE and in your terminal run the following commands:
 
  * npm install
 
@@ -16,7 +18,7 @@ Portfolio of the Open-Source Community at IIT Jodhpur.
  
  * npm run serve
 
-4. The project should now be running locally!
+5. The project should now be running locally!
 
 ## Lints and fixes files
 
