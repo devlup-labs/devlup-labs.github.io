@@ -39,6 +39,27 @@ v-container(fluid='' style='margin: 0px; padding: 0px; width: 100%;')
                   h3.font-weight-light.mb-n.pa-3(style="text-align: center;color:#000") {{item.subheading}}
               v-flex(xs12='',sm12='', md4='',lg4='',xl4='')
                 v-img.mt-5.ml-n3.mr-3(:src="item.src" contain aspect-ratio='2.5')    
+   div(align='center' class="form-container" justify='center')
+   v-container.col-sm-10(align='center' justify='center')
+    v-row.py-2
+     v-flex.mx-7.mt-5(xs12='',sm12='', md4='',lg4='',xl4='', justify='center')
+      v-img.pl-3.mt-10(src="../assets/contactUs.png" max-height='500px' max-width='500px')
+     v-flex.px-8.mx-10(justify='center' align='center')
+       div.ml-5.Form(name='formSection' id='formComponent')
+            iframe(name='hiddenframe' height='0' width='0' border='0' style='display: none;' onload="if(submitted){location.reload()}")
+            v-form(class="login my-3" max-height='300px' id="user_info_submit" name="form"
+                  action="https://docs.google.com/forms/d/e/1FAIpQLScF25Ruct7LDlDyG8GBqb5pybTFE_DnfqJOjxzBY38k5-4fLQ/formResponse"
+                  method="POST" target="hiddenframe"
+                  v-model="validform"
+                  v-ref='form'
+                  onsubmit="submitted=true;")
+              h1(style='color:#1b65c4;' class="font-weight-bold py-3") Contact Us
+                v-text-field(label="Full name: " prepend-icon='mdi-account' id="name" name="entry.1947078806" color='#1b65c4' type="text" counter=20 v-model="Name" :rules="namerules")
+                v-text-field(label="Email: "  prepend-icon='mdi-email' id="email"   name="entry.251653149" color='#1b65c4' type="email" v-model="emailaddress" :rules="emailrules")
+            
+                v-text-field(label="Contact Number:"  prepend-icon=" mdi-dialpad"  color='#1b65c4' id="phone" name="entry.1279789724" type="phone"   counter=true v-model="mobileno" :rules="numberrules")
+                v-text-field(label="Comments and queries" color='#1b65c4' name="entry.1361975626" type="textarea" id="suggestion" counter=true)
+                v-btn.my-3(color='#1b65c4' type='submit' :disabled="!validform").white--text submit
 
 </template>
 <script>
@@ -100,6 +121,23 @@ export default {
         subheading:
           "Self Learning sits at the heart of devlup labs, we believe in proper utilization of resources and peer guidance to propel self learning."
       }
+    ],
+    validform: false,
+    submitted: false,
+    Name: "",
+    namerules: [
+      v => !!v || "name should not be emptty",
+      v => (v && v.length <= 20) || "name should be less than 20"
+    ],
+    emailaddress: "",
+    emailrules: [
+      v => !!v || "email is required",
+      v => /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/.test(v) || "E-mail must be valid"
+    ],
+    mobileno: "",
+    numberrules: [
+      v => !!v || "Mobile number is required",
+      v => /^[0-9]{10}/.test(v) || "Mobile number must be valid"
     ]
   })
 };
