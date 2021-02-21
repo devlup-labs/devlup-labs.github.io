@@ -56,7 +56,6 @@ v-container(fluid='' style='margin: 0px; padding: 0px; width: 100%;')
               h1(style='color:#1b65c4;' class="font-weight-bold py-3") Contact Us
                 v-text-field(label="Full name: " prepend-icon='mdi-account' id="name" name="entry.1947078806" color='#1b65c4' type="text" counter=20 v-model="Name" :rules="namerules")
                 v-text-field(label="Email: "  prepend-icon='mdi-email' id="email"   name="entry.251653149" color='#1b65c4' type="email" v-model="emailaddress" :rules="emailrules")
-            
                 v-text-field(label="Contact Number:"  prepend-icon=" mdi-dialpad"  color='#1b65c4' id="phone" name="entry.1279789724" type="phone"   counter=true v-model="mobileno" :rules="numberrules")
                 v-text-field(label="Comments and queries" color='#1b65c4' name="entry.1361975626" type="textarea" id="suggestion" counter=true)
                 v-btn.my-3(color='#1b65c4' type='submit' :disabled="!validform").white--text submit
