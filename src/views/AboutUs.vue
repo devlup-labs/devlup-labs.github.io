@@ -39,13 +39,13 @@ v-container(fluid='' style='margin: 0px; padding: 0px; width: 100%;')
                   h3.font-weight-light.mb-n.pa-3(style="text-align: center;color:#000") {{item.subheading}}
               v-flex(xs12='',sm12='', md4='',lg4='',xl4='')
                 v-img.mt-5.ml-n3.mr-3(:src="item.src" contain aspect-ratio='2.5')    
-  div(align='center' class="form-container" justify='center')
+  div(align='center' justify='center')
     v-container.col-sm-10(align='center' justify='center')
      v-row.py-2
-      v-flex.mx-7.mt-5(xs12='',sm12='', md4='',lg4='',xl4='', justify='center')
-       v-img.pl-3.mt-10(src="../assets/contactUs.png" max-height='500px' max-width='500px')
-      v-flex.px-8.mx-10(justify='center' align='center')
-        div.ml-5.Form(name='formSection' id='formComponent')
+      v-flex.pt-6.px-3(lg5='', justify='center')
+       v-img.img-fluid(src="../assets/contactUs.png")
+      v-flex.px-2.mx-3(justify='center' align='center')
+        div.mt-5.Form
             iframe(name='hiddenframe' height='0' width='0' border='0' style='display: none;' onload="if(submitted){location.reload()}")
             v-form(class="login my-3" max-height='300px' id="user_info_submit" name="form"
                   action="https://docs.google.com/forms/d/e/1FAIpQLScF25Ruct7LDlDyG8GBqb5pybTFE_DnfqJOjxzBY38k5-4fLQ/formResponse"
