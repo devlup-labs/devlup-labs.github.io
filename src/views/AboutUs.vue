@@ -39,6 +39,27 @@ v-container(fluid='' style='margin: 0px; padding: 0px; width: 100%;')
                   h3.font-weight-light.mb-n.pa-3(style="text-align: center;color:#000") {{item.subheading}}
               v-flex(xs12='',sm12='', md4='',lg4='',xl4='')
                 v-img.mt-5.ml-n3.mr-3(:src="item.src" contain aspect-ratio='2.5')    
+  div(align='center' justify='center')
+    v-container.col-sm-10(align='center' justify='center')
+     v-row.py-2
+      v-flex.pt-6.px-3(lg5='', justify='center')
+       v-img.img-fluid(src="../assets/contactUs.png")
+      v-flex.px-2.mx-3(justify='center' align='center')
+        div.mt-5.Form
+            iframe(name='hiddenframe' height='0' width='0' border='0' style='display: none;' onload="if(submitted){location.reload()}")
+            v-form(class="login my-3" max-height='300px' id="user_info_submit" name="form"
+                  action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSd25Z-mQHDN42vNZdMXwQXkH_LfTnpUMA2kxJPnj4VHy6q8JQ/formResponse"
+                  method="POST" target="hiddenframe"
+                  v-model="validform"
+                  v-ref='form'
+                  onsubmit="submitted=true;")
+              h1(style='color:#1b65c4;' class="font-weight-bold py-3") Contact Us
+                v-text-field(label="Email: "  prepend-icon='mdi-email' id="email"   name="entry.1624474703" color='#1b65c4' type="email" v-model="emailaddress" :rules="emailrules")
+                v-text-field(label="Full name: " prepend-icon='mdi-account' id="name" name="entry.274700485" color='#1b65c4' type="text" counter=20 v-model="Name" :rules="namerules")
+                
+                v-text-field(label="Contact Number:"  prepend-icon=" mdi-dialpad"  color='#1b65c4' id="phone" name="entry.1452831997" type="phone"   counter=true v-model="mobileno" :rules="numberrules")
+                v-text-field(label="Comments and queries" color='#1b65c4' name="entry.629220262" type="textarea" id="suggestion" counter=true)
+                v-btn.my-3(color='#1b65c4' type='submit' :disabled="!validform").white--text submit
 
 </template>
 <script>
@@ -100,6 +121,23 @@ export default {
         subheading:
           "Self Learning sits at the heart of devlup labs, we believe in proper utilization of resources and peer guidance to propel self learning."
       }
+    ],
+    validform: false,
+    submitted: false,
+    Name: "",
+    namerules: [
+      v => !!v || "name should not be emptty",
+      v => (v && v.length <= 20) || "name should be less than 20"
+    ],
+    emailaddress: "",
+    emailrules: [
+      v => !!v || "email is required",
+      v => /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/.test(v) || "E-mail must be valid"
+    ],
+    mobileno: "",
+    numberrules: [
+      v => !!v || "Mobile number is required",
+      v => /^[0-9]{10}/.test(v) || "Mobile number must be valid"
     ]
   })
 };
