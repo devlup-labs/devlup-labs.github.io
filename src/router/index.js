@@ -51,6 +51,12 @@ const routes = [
     name: "Team",
     component: () => import("../views/Profile"),
     meta: { title: "Team" }
+  },
+  {
+    path: "/WoC",
+    name: "WoC",
+    component: () => import("../views/WoC"),
+    meta: { title: "WoC" }
   }
 ];
 
