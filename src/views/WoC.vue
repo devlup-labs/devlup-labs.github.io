@@ -9,6 +9,7 @@ div(align='center', justify='center')
           WoCCard(:WoC='WoC')
 </template>
 
+
 <script>
 const WoCCard = () => import("../components/WoCCard");
 const Preloader = () => import("../components/Preloader");
