@@ -8,8 +8,8 @@ div(align='center', justify='center')
         v-card-text(class="white--text")
           h1.font-weight-regular Winter of Code Contributors
       v-row
-        h2(style="font-weight:normal") Dear Developers,
-        h3(style="font-weight:normal").pl-5 It is really admiring that you could complete the project as per the time deadline. We must appreciate you on your achievement. You have done remarkable work. While having such a busy schedule, it is really commendable that you managed to complete the task within the time. We also feel proud to be linked with you in the process. Congratulations to you all. 
+        h2(style="font-weight:normal") Hey Everyone!,
+        h3(style="font-weight:normal").pl-5 After about 2 months of continuous efforts, Winter of Code 21 has come to an end. It was really amazing seeing the applicants work on their projects so passionately. It is with great pleasure, that we announce, the list of successful applicants for WoC 21. We wish these applicants congratulations and good luck for the future. A warm thank you to all the WoC mentors and the entire WoC 21 Team, it wouldn't have been possible without you!
       v-row(justify='left').mt-6
         v-flex.mb-10(v-for='WoC in wocs'  :key='WoC.menteename' xs12 sm6 md4 lg3 xl3)
           WoCCard(:WoC='WoC')
