@@ -5,7 +5,7 @@ div(align='center', justify='center')
   div(v-else)
     v-container
       v-row(justify='left')
-        v-flex.mb-10(v-for='Profile in profiles', :key='Profile.name', xs12='',sm12='', md6='',lg4='',xl4='')
+        v-flex.mb-10(v-for='Profile in profiles', :key='Profile[0]', xs12='',sm12='', md6='',lg4='',xl4='')
           ProfileCard(:Profile='Profile')
 </template>
 
@@ -21,13 +21,16 @@ export default {
   }),
   methods: {
     fetchProfiles() {
+      const spreadsheetId = "1LlK1GjE2mq3zgd5MVhRoe-kDkybNdtDADOz3eTSI4ns";
+      const theKey = "AIzaSyATrXAShv2WHgI4I5o4QK6BuSzqWd9ulDE";
+      const sheetname = "Profile";
+      const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetname}?alt=json&key=${theKey}`;
       this.loading = true;
-      fetch(
-        "https://spreadsheets.google.com/feeds/list/1gEG08lGpzhtVYzmjyOuYF5qlTFAWhvR2FeAuQlIlIuY/oh0n2ko/public/values?alt=json"
-      )
+      fetch(url)
         .then(e =>
           e.json().then(e => {
-            this.profiles = [...e.feed.entry];
+            this.profiles = [...e.values.slice(1)];
+            console.log(this.profiles);
           })
         )
         .finally(() => (this.loading = false));
