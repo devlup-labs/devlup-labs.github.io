@@ -23,11 +23,12 @@ export default {
       const spreadsheetId = "1LlK1GjE2mq3zgd5MVhRoe-kDkybNdtDADOz3eTSI4ns";
       const theKey = "AIzaSyATrXAShv2WHgI4I5o4QK6BuSzqWd9ulDE";
       const sheetname = "Project";
-      const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetname}?alt=json&key=${theKey}`;
+      const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetname}?key=${theKey}`;
       this.loading = true;
       fetch(url)
         .then(e =>
           e.json().then(e => {
+            console.log(e);
             this.projects = [...e.values.slice(1)];
           })
         )
