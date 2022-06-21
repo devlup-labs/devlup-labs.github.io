@@ -1,3 +1,4 @@
+<!-- Profile[0]->Profile index -->
 <template lang="pug">
 div(align='center', justify='center')
   div(v-if="loading")
@@ -22,8 +23,8 @@ export default {
   methods: {
     fetchProfiles() {
       const spreadsheetId = "1LlK1GjE2mq3zgd5MVhRoe-kDkybNdtDADOz3eTSI4ns";
-      const theKey = "AIzaSyATrXAShv2WHgI4I5o4QK6BuSzqWd9ulDE";
       const sheetname = "Profile";
+      const theKey = process.env.VUE_APP_API;
       const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetname}?alt=json&key=${theKey}`;
       this.loading = true;
       fetch(url)

@@ -1,3 +1,11 @@
+<!-- WoC[0]-> index -->
+<!-- WoC[1]-> mentor name -->
+<!-- WoC[2]-> mentor email -->
+<!-- WoC[3]-> mentee name -->
+<!-- WoC[4]-> mentee email -->
+<!-- WoC[5]-> project name -->
+<!-- WoC[6]-> project repo -->
+
 <template lang="pug">
 v-row(justify='left')
   v-col

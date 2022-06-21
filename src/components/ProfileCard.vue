@@ -1,3 +1,13 @@
+<!-- Profile[0]->Profile index -->
+<!-- Profile[1]->Profile name -->
+<!-- Profile[2]->Profile current designation -->
+<!-- Profile[3]->Profile devlup labs designation-->
+<!-- Profile[4]->Profile info -->
+<!-- Profile[5]->Profile image url -->
+<!-- Profile[6]->Profile email -->
+<!-- Profile[7]->Profile github link -->
+<!-- Profile[8]->Profile gitlab link -->
+<!-- Profile[9]->Profile linkedin -->
 <template lang="pug">
 v-row(justify='left')
   v-col

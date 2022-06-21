@@ -1,3 +1,5 @@
+<!-- Project[0]-> Project index -->
+
 <template lang="pug">
 div(align='center', justify='center')
   div(v-if="loading")
@@ -5,7 +7,8 @@ div(align='center', justify='center')
   div(v-else)
     v-container
       v-row(justify='left')
-        v-flex.mb-6(v-for='Project in projects', :key='Project[0]', xs12='',sm12='', md6='',lg4='',xl4='')
+        v-flex.mb-6(v-for='Project in projects', :key='Project[0]', xs12='',sm12='', md6='',lg4='',xl4='') 
+       
           ProjectCard(:Project='Project')
 </template>
 <script>
@@ -21,7 +24,7 @@ export default {
   methods: {
     fetchProjects() {
       const spreadsheetId = "1LlK1GjE2mq3zgd5MVhRoe-kDkybNdtDADOz3eTSI4ns";
-      const theKey = "AIzaSyATrXAShv2WHgI4I5o4QK6BuSzqWd9ulDE";
+      const theKey = process.env.VUE_APP_API;
       const sheetname = "Project";
       const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetname}?key=${theKey}`;
       this.loading = true;
