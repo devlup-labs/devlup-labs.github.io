@@ -34,15 +34,16 @@ export default {
     scrollform: function() {
       if (this.clicked) {
         window.scrollTo(0, document.body.scrollHeight);
-        this.clicked = false ;
+        this.clicked = false;
       }
     },
     viewform: function() {
       this.clicked = true;
-        this.scrollform();
+      this.scrollform();
     }
   },
   components: {
     form: form
-} };
+  }
+};
 </script>
