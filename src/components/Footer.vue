@@ -2,11 +2,11 @@
   v-card.elevation-24
     v-footer(color="basic" padless)
       v-row(justify="center" no-gutters)
-        v-btn.py-2(v-for="link in links" :key="link" :href="link.href" color="white" icon)
-          v-icon {{link.icon}}
-      v-col.py-0.text-center(cols="12")
-       v-btn.py-0.text-center.white--text.font-weight-bold(to='./about' text='' plain='' justify='center' color='white' @click="viewform" ) Contact Us
-      v-col.py-0.text-center.white--text.font-weight-bold(cols="12") {{ new Date().getFullYear() }} — Devlup Labs
+        v-btn.mt-1.px-6(v-for="link in links" :key="link" :href="link.href" color="white" icon)
+          v-icon(size='30') {{link.icon}}
+      v-col.mt-n2.text-center(cols="12")
+       v-btn.text-center.white--text.font-weight-bold.blue.darken-2.round(to='./about' text='' plain='' justify='center' color='white' @click="viewform" ) Contact Us
+      v-col.mt-n6.text-center.white--text(cols="12") © Copyright {{ new Date().getFullYear() }} Devlup Labs
 </template>
 <script>
 import form from "../views/AboutUs.vue";
@@ -47,3 +47,11 @@ export default {
   }
 };
 </script>
+<style scoped>
+.white--text:before {
+  background: none;
+}
+.round {
+  border-radius: 8px;
+}
+</style>
