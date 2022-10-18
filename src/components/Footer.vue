@@ -1,12 +1,3 @@
-<style>
-.white--text:before {
-  background: none;
-}
-.round {
-  border-radius: 8px;
-}
-</style>
-
 <template lang="pug">
   v-card.elevation-24
     v-footer(color="basic" padless)
@@ -56,3 +47,11 @@ export default {
   }
 };
 </script>
+<style scoped>
+.white--text:before {
+  background: none;
+}
+.round {
+  border-radius: 8px;
+}
+</style>
