@@ -1,0 +1,38 @@
+name: Deploy to gh-pages
+
+# Script will be executed on push/PR to `vue` branch
+on: 
+  push:
+    branches:
+      - vue
+
+  pull_request:
+    branches: 
+      - vue
+
+jobs:
+  # Job name
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency: ci-${{github.ref}} # Only one thing at a time incase of multiple commits
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3 # get the actual source code into virtual machine
+
+      - name: Configure node 
+        uses: actions/setup-node@v3
+        with: 
+          node-version: 14
+
+      # generic steps
+      - name: Install and Build
+        run: | 
+          npm ci 
+          npm run build 
+        
+      - name: Deploy to gh-pages 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with: 
+          folder: dist
+          branch: gh-pages
+          
