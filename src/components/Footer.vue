@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-card.elevation-24
+v-card.elevation-24
     v-footer(color="basic" padless)
       v-row(justify="center" no-gutters)
         v-btn.py-2(v-for="link in links" :key="link" :href="link.href" color="white" icon)
@@ -34,15 +34,16 @@ export default {
     scrollform: function() {
       if (this.clicked) {
         window.scrollTo(0, document.body.scrollHeight);
-        this.clicked = false ;
+        this.clicked = false;
       }
     },
     viewform: function() {
       this.clicked = true;
-        this.scrollform();
+      this.scrollform();
     }
   },
   components: {
     form: form
-} };
+  }
+};
 </script>
