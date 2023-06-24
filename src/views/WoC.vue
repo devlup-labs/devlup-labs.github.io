@@ -1,3 +1,4 @@
+<!-- WoC[0]-> index -->
 <template lang="pug">
 div(align='center', justify='center')
   div(v-if="loading")
@@ -11,7 +12,7 @@ div(align='center', justify='center')
         h2(style="font-weight:normal") Hey Everyone!,
         h3(style="font-weight:normal").pl-5 After about 2 months of continuous efforts, Winter of Code 21 has come to an end. It was really amazing seeing the applicants work on their projects so passionately. It is with great pleasure, that we announce, the list of successful applicants for WoC 21. We wish these applicants congratulations and good luck for the future. A warm thank you to all the WoC mentors and the entire WoC 21 Team, it wouldn't have been possible without you!
       v-row(justify='left').mt-6
-        v-flex.mb-10(v-for='WoC in wocs'  :key='WoC.menteename' xs12 sm6 md4 lg3 xl3)
+        v-flex.mb-10(v-for='WoC in wocs'  :key='WoC[0]' xs12 sm6 md4 lg3 xl3)
           WoCCard(:WoC='WoC')
 </template>
 
@@ -27,13 +28,16 @@ export default {
   }),
   methods: {
     fetchWoCs() {
+      const spreadsheetId = "1gEG08lGpzhtVYzmjyOuYF5qlTFAWhvR2FeAuQlIlIuY";
+      const theKey = process.env.VUE_APP_API;
+      const sheetname = "WoC";
+      const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetname}?alt=json&key=${theKey}`;
       this.loading = true;
-      fetch(
-        "https://spreadsheets.google.com/feeds/list/1gEG08lGpzhtVYzmjyOuYF5qlTFAWhvR2FeAuQlIlIuY/ocnnrqv/public/values?alt=json"
-      )
+      fetch(url)
         .then(e =>
           e.json().then(e => {
-            this.wocs = [...e.feed.entry];
+            console.log(e);
+            this.wocs = [...e.values.slice(1)];
           })
         )
         .finally(() => (this.loading = false));

@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-row.justify-center
+v-row.justify-center
     v-col(cols='12', md='8')
       div(v-if="loading")
         Preloader
@@ -21,13 +21,15 @@ export default {
   }),
   methods: {
     fetchTimelines() {
+      const spreadsheetId = "1gEG08lGpzhtVYzmjyOuYF5qlTFAWhvR2FeAuQlIlIuY";
+      const theKey = process.env.VUE_APP_API;
+      const sheetname = "Timeline";
+      const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetname}?alt=json&key=${theKey}`;
       this.loading = true;
-      fetch(
-        "https://spreadsheets.google.com/feeds/list/1gEG08lGpzhtVYzmjyOuYF5qlTFAWhvR2FeAuQlIlIuY/oemu3cb/public/values?alt=json"
-      )
+      fetch(url)
         .then(e =>
           e.json().then(e => {
-            this.timelineDetails = [...e.feed.entry];
+            this.timelineDetails = [...e.values.slice(1)];
           })
         )
         .finally(() => (this.loading = false));

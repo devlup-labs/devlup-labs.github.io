@@ -1,3 +1,5 @@
+<!-- Project[0]-> Project index -->
+
 <template lang="pug">
 div(align='center', justify='center')
   div(v-if="loading")
@@ -5,7 +7,8 @@ div(align='center', justify='center')
   div(v-else)
     v-container
       v-row(justify='left')
-        v-flex.mb-6(v-for='Project in projects', :key='Project.name', xs12='',sm12='', md6='',lg4='',xl4='')
+        v-flex.mb-6(v-for='Project in projects', :key='Project[0]', xs12='',sm12='', md6='',lg4='',xl4='') 
+       
           ProjectCard(:Project='Project')
 </template>
 <script>
@@ -20,13 +23,16 @@ export default {
   }),
   methods: {
     fetchProjects() {
+      const spreadsheetId = "1gEG08lGpzhtVYzmjyOuYF5qlTFAWhvR2FeAuQlIlIuY";
+      const theKey = process.env.VUE_APP_API;
+      const sheetname = "Project";
+      const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetname}?key=${theKey}`;
       this.loading = true;
-      fetch(
-        "https://spreadsheets.google.com/feeds/list/1gEG08lGpzhtVYzmjyOuYF5qlTFAWhvR2FeAuQlIlIuY/o4eja9x/public/values?alt=json"
-      )
+      fetch(url)
         .then(e =>
           e.json().then(e => {
-            this.projects = [...e.feed.entry];
+            console.log(e);
+            this.projects = [...e.values.slice(1)];
           })
         )
         .finally(() => (this.loading = false));
