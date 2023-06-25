@@ -22,6 +22,7 @@ export default {
   }),
   methods: {
     fetchProfiles() {
+      // spreadsheetID=17O_B9OCnz6Byey-Y1o0K5WCTTlXJterlwNDgpjSN-s4
       const url = `https://script.google.com/macros/s/AKfycbwprDq5bguYad1gsfCLxbWxM1YXZfVlWiXYK1WCbrPj5WO8JbxjqSbnieVIoosOgMbVMA/exec`;
       this.loading = true;
       fetch(url)
