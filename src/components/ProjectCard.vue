@@ -20,16 +20,17 @@ v-row(align='center', justify='left')
         v-carousel-item(v-if='Project.image3',contain='contain', :src='Project.image3')
       v-card(flat='flat')
         h5.pa-1.d-inline-blocktext-truncate(style='height:50px') {{ Project[2] }}
-        v-divider
+        v-row.justify-end.align-center
+          v-divider.ml-7
+          v-btn.pa-0.mr-2(icon='icon', @click='show = !show')
+            v-icon.pa-0.ma-0 {{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}
         v-flex.pa-1
           v-chip.pa-2.ma-1(v-if='Project.tag1',label='label', small='small') {{ Project.tag1 }} 
           v-chip.pa-2.ma-1(v-if='Project.tag2',label='label', small='small') {{ Project.tag2 }} 
           v-chip.pa-2.ma-1(v-if='Project.tag3',label='label', small='small') {{ Project.tag3 }} 
-          v-btn(icon='icon', @click='show = !show')
-            v-icon {{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}
         v-expand-transition
           div(v-show='show')
-            h6.pa-1 {{ Project[3] }}
+            h6.pa-1 {{ Project.info }}
         v-row.justify-space-around
           v-col(cols='5', v-if='Project.info')
             v-btn.ml-1.mr-1(:href='Project.info',target='_blank', dark='dark', block='block')
@@ -37,7 +38,7 @@ v-row(align='center', justify='left')
           v-col(cols='5', v-if='Project.weblink')
             v-btn.ml-1.mr-1(:href='Project.weblink',target='_blank', block='block')
               v-icon mdi-web 
-     
+        
 </template>
 
 <script>
