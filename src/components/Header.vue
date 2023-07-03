@@ -1,5 +1,5 @@
 <template lang="pug">
-    v-card.elevation-24
+v-card.elevation-24
         v-app-bar(app clipped-right flat floating style="opacity:1.0")
           
             v-app-bar-nav-icon.hidden-md-and-up(@click.stop="drawer = !drawer")

@@ -22,15 +22,14 @@ export default {
   }),
   methods: {
     fetchProfiles() {
-      const spreadsheetId = "1gEG08lGpzhtVYzmjyOuYF5qlTFAWhvR2FeAuQlIlIuY";
-      const sheetname = "Profile";
-      const theKey = process.env.VUE_APP_API;
-      const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetname}?alt=json&key=${theKey}`;
+      // spreadsheetID=17O_B9OCnz6Byey-Y1o0K5WCTTlXJterlwNDgpjSN-s4
+      const url = `https://script.google.com/macros/s/AKfycbwprDq5bguYad1gsfCLxbWxM1YXZfVlWiXYK1WCbrPj5WO8JbxjqSbnieVIoosOgMbVMA/exec`;
       this.loading = true;
       fetch(url)
         .then(e =>
           e.json().then(e => {
-            this.profiles = [...e.values.slice(1)];
+            console.log(e);
+            this.profiles = e;
             console.log(this.profiles);
           })
         )
