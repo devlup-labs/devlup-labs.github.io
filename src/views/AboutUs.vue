@@ -88,7 +88,7 @@ export default {
       },
       {
         direction: "right",
-        heading: "Projects that matter",
+        heading: "Projects that matter to the community",
         src: "../data/images/AboutusPoints/point3new.png",
         subheading:
           "We at devlup labs are committed to products and projects that matter, projects that serve a real purpose for the community."
