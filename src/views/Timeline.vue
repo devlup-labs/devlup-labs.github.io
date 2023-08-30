@@ -21,15 +21,13 @@ export default {
   }),
   methods: {
     fetchTimelines() {
-      const spreadsheetId = "1gEG08lGpzhtVYzmjyOuYF5qlTFAWhvR2FeAuQlIlIuY";
-      const theKey = process.env.VUE_APP_API;
-      const sheetname = "Timeline";
-      const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetname}?alt=json&key=${theKey}`;
+      // spreadsheetID=17O_B9OCnz6Byey-Y1o0K5WCTTlXJterlwNDgpjSN-s4
+      const url = `https://script.google.com/macros/s/AKfycbzIRm5fjP3jPRsH-MLER9OeBl_B-ID2xp98rM7fNUPF0A419kUgOdZ5n0N8CNjleUFH1A/exec`;
       this.loading = true;
       fetch(url)
         .then(e =>
           e.json().then(e => {
-            this.timelineDetails = [...e.values.slice(1)];
+            this.timelineDetails = e;
           })
         )
         .finally(() => (this.loading = false));

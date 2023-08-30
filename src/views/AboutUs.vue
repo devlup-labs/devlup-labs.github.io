@@ -88,7 +88,7 @@ export default {
       },
       {
         direction: "right",
-        heading: "Projects that matter",
+        heading: "Projects that matter to the community",
         src: "../data/images/AboutusPoints/point3new.png",
         subheading:
           "We at devlup labs are committed to products and projects that matter, projects that serve a real purpose for the community."
@@ -132,7 +132,10 @@ export default {
     emailaddress: "",
     emailrules: [
       v => !!v || "email is required",
-      v => /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/.test(v) || "E-mail must be valid"
+      v =>
+        /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/.test(
+          v
+        ) || "E-mail must be valid"
     ],
     mobileno: "",
     numberrules: [

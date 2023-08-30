@@ -6,10 +6,9 @@ v-layout(row='' wrap='')
 </template>
 <script>
 export default {
-  name: "Podcastcard", 
+  name: "Podcastcard",
   props: {
-    podcast: {type: Object , required: true}
+    podcast: { type: Object, required: true }
   }
-
 };
 </script>
