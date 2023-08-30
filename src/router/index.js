@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-
 Vue.use(VueRouter);
 
 const routes = [
@@ -47,16 +46,22 @@ const routes = [
     meta: { title: "Podcast" }
   },
   {
-    path: "/team",
-    name: "Team",
-    component: () => import("../views/Profile"),
-    meta: { title: "Team" }
+    path: "/current_team",
+    name: "current_team",
+    component: () => import("../views/CurrentTeam"), // Replace "../views/Profile" with the path to the component for the current team
+    meta: { title: "Current Team" }
   },
   {
     path: "/WoC",
     name: "WoC",
     component: () => import("../views/WoC"),
     meta: { title: "WoC" }
+  },
+  {
+    path: "/alumni_team",
+    name: "alumni_team",
+    component: () => import("../views/AlumniTeam"), // Add the route for the AlumniTeam component
+    meta: { title: "Alumni Team" }
   }
 ];
 

@@ -23,16 +23,13 @@ export default {
   }),
   methods: {
     fetchProjects() {
-      const spreadsheetId = "1gEG08lGpzhtVYzmjyOuYF5qlTFAWhvR2FeAuQlIlIuY";
-      const theKey = process.env.VUE_APP_API;
-      const sheetname = "Project";
-      const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetname}?key=${theKey}`;
+      const url = `https://script.google.com/macros/s/AKfycbxsb_2WN21NJ4p_yEVS8DoCIcs-3lL9VlB5zgbGXeEhfERHkjkIcFOTvkhw1m69irgH7g/exec`;
       this.loading = true;
       fetch(url)
         .then(e =>
           e.json().then(e => {
             console.log(e);
-            this.projects = [...e.values.slice(1)];
+            this.projects = e;
           })
         )
         .finally(() => (this.loading = false));
