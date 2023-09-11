@@ -22,7 +22,7 @@ export default {
   }),
   methods: {
     fetchProfiles() {
-      const url = `https://script.google.com/macros/s/AKfycbwprDq5bguYad1gsfCLxbWxM1YXZfVlWiXYK1WCbrPj5WO8JbxjqSbnieVIoosOgMbVMA/exec`;
+      const url = `https://script.google.com/macros/s/AKfycbxOcYZanZnaQb_FDGvXC4FgDcIiZQXrVaCsSfufX2qYnvOIPDmlXMY7orw2xIlm-BxX/exec`;
       this.loading = true;
       fetch(url)
         .then(e =>
