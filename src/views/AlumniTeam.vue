@@ -27,9 +27,9 @@ export default {
       fetch(url)
         .then(e =>
           e.json().then(e => {
-            console.log(e);
+            // console.log(e);
             this.profiles = e;
-            console.log(this.profiles);
+            // console.log(this.profiles);
           })
         )
         .finally(() => (this.loading = false));

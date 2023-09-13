@@ -13,6 +13,11 @@ div(align='center', justify='center')
 <script>
 const ProfileCard = () => import("../components/ProfileCard");
 const Preloader = () => import("../components/Preloader");
+
+const sortingObject = {
+  "Final Year": 1,
+  "Pre-Final Year": 2
+};
 export default {
   name: "Profile",
   components: { ProfileCard, Preloader },
@@ -20,21 +25,30 @@ export default {
     loading: true,
     profiles: []
   }),
+
   methods: {
+    sortedProfiles() {
+      return this.profiles.slice().sort((a, b) => {
+        const rankA = sortingObject[a.currentDesignation];
+        const rankB = sortingObject[b.currentDesignation];
+        return rankA - rankB;
+      });
+    },
+
     fetchProfiles() {
-      const url = `https://script.google.com/macros/s/AKfycbwprDq5bguYad1gsfCLxbWxM1YXZfVlWiXYK1WCbrPj5WO8JbxjqSbnieVIoosOgMbVMA/exec`;
+      const url = `https://script.google.com/macros/s/AKfycbxOcYZanZnaQb_FDGvXC4FgDcIiZQXrVaCsSfufX2qYnvOIPDmlXMY7orw2xIlm-BxX/exec`;
       this.loading = true;
       fetch(url)
         .then(e =>
           e.json().then(e => {
-            console.log(e);
             this.profiles = e;
-            console.log(this.profiles);
+            this.profiles = this.sortedProfiles();
           })
         )
         .finally(() => (this.loading = false));
     }
   },
+
   mounted() {
     this.fetchProfiles();
   }

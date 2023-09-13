@@ -36,7 +36,7 @@ export default {
       fetch(url)
         .then(e =>
           e.json().then(e => {
-            console.log(e);
+            // console.log(e);
             this.wocs = [...e.values.slice(1)];
           })
         )

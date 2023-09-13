@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-card.elevation-24
+v-card.elevation-24
     v-app-bar(app clipped-right flat floating style="opacity: 1.0")
       v-app-bar-nav-icon.hidden-md-and-up(@click.stop="drawer = !drawer")
       router-link(to='/')
@@ -14,7 +14,7 @@
         v-btn#menu-activator(pa-2.ma-1 :key="team" style="box-shadow : none")  Team
           v-menu(activator='#menu-activator')
             v-list
-              v-list-item(pa-2.ma-1 v-for='(item, index) in teams', :key='index', :value='index' :to="{name: item.link}")
+              v-list-item(pa-2.ma-1 v-for='item in teams', :key='item.text', :value='item.text' :to="{name: item.link}")
                 v-list-item-title {{ item.text }} 
                 
     v-navigation-drawer(v-model="drawer" app left temporary style="z-index: 5")
@@ -33,7 +33,7 @@
               v-list-item-content(v-on="on")
                 v-list-item-title.grey--text Team
             v-list
-              v-list-item(v-for='(item, index) in teams', :key='index', :value='index' :to="{name: item.link}")
+              v-list-item(v-for='item in teams', :key='item.text', :value='item.text' :to="{name: item.link}")
                  v-list-item-title {{ item.text }}
 
 
@@ -78,6 +78,9 @@ export default {
         { text: "Alumni Team", icon: "mdi-human-male-male" }
       ];
     }
+  },
+  methods: {
+    team() {}
   }
 };
 </script>

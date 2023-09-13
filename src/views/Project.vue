@@ -1,12 +1,12 @@
 <!-- Project[0]-> Project index -->
 
 <template lang="pug">
-div(align='center', justify='center')
+div(align='center')
   div(v-if="loading")
         Preloader
   div(v-else)
     v-container
-      v-row(justify='left')
+      v-row
         v-flex.mb-6(v-for='Project in projects', :key='Project[0]', xs12='',sm12='', md6='',lg4='',xl4='') 
        
           ProjectCard(:Project='Project')
@@ -28,7 +28,7 @@ export default {
       fetch(url)
         .then(e =>
           e.json().then(e => {
-            console.log(e);
+            // console.log(e);
             this.projects = e;
           })
         )
