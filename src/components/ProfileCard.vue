@@ -19,7 +19,7 @@ v-row(justify='left')
               v-row 
                 v-col(cols="4" style="background-color:#fff") 
                   v-avatar(:size="(4.5/15)*getProfileWidth")
-                    img(:src="Profile.src" contain)
+                    img(:src=`(Profile.src=="")?"https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png":Profile.src` contain)
                 v-col.pa-2(cols="7")  
                   div
                     h4.mt-1.mb-n2 {{ Profile.name }}
