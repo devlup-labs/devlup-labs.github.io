@@ -30,7 +30,7 @@ v-row(align='center', justify='left')
           v-chip.pa-2.ma-1(v-if='Project.tag3',label='label', small='small') {{ Project.tag3 }} 
         v-expand-transition
           div(v-show='show')
-            h6.pa-1 {{ Project.info }}
+            h6.pa-1 {{ Project.info1 }}
         v-row.justify-space-around
           v-col(cols='5', v-if='Project.info')
             v-btn.ml-1.mr-1(:href='Project.info',target='_blank', dark='dark', block='block')
